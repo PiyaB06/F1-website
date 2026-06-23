@@ -247,10 +247,76 @@ h2{
     transition:.4s ease;
 }
 
+/* =====================
+   CARD ICONS
+===================== */
+
+.card{
+    background:#1E1E1E;
+    padding:35px;
+    border-radius:20px;
+    text-decoration:none;
+    color:white;
+    transition:.4s ease;
+}
+
+.card-icon{
+    font-size:2rem;
+    color:#E10600;
+    margin-bottom:20px;
+
+    transition:.4s ease;
+}
+
 .card:hover{
     transform:translateY(-10px);
     box-shadow:0 0 20px #E10600;
 }
+
+.card:hover .card-icon{
+    transform:scale(1.15);
+    text-shadow:0 0 15px #E10600;
+}
+ /* =====================
+   HELMET ICON
+===================== */
+.helmet-icon {
+  position: relative;
+  width: 60px;
+  height: 50px;
+  background-color: #333333; /* Helmet base shell */
+  border-radius: 50% 50% 20% 20%;
+  box-shadow: inset 0 -4px 0 #111111;
+}
+
+/* The Visor */
+.helmet-icon::before {
+  content: '';
+  position: absolute;
+  top: 12px;
+  left: 8px;
+  width: 44px;
+  height: 18px;
+  background-color: #88cbf2; /* Visor color */
+  border-radius: 10px 10px 4px 4px;
+  border-bottom: 2px solid #5ab3e3;
+}
+
+/* The Chin Guard */
+.helmet-icon::after {
+  content: '';
+  position: absolute;
+  bottom: -10px;
+  left: 18px;
+  width: 24px;
+  height: 14px;
+  background-color: #444444; /* Chin guard color */
+  border-radius: 0 0 8px 8px;
+  border-top: 2px solid #222222;
+}
+
+
+
 
 /* =====================
    WHY WATCH
