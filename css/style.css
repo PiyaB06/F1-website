@@ -1,0 +1,331 @@
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    scroll-behavior:smooth;
+}
+
+body{
+    font-family:'Poppins',sans-serif;
+    background:#0D0D0D;
+    color:white;
+}
+
+/* =====================
+   NAVBAR
+===================== */
+
+nav{
+    background:#111;
+    padding:20px 8%;
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    position:sticky;
+    top:0;
+    z-index:1000;
+}
+
+.logo{
+    color:#E10600;
+    font-size:2rem;
+    font-family:'Orbitron',sans-serif;
+    font-weight:bold;
+}
+
+.nav-links{
+    display:flex;
+    gap:30px;
+    list-style:none;
+}
+
+.nav-links a{
+    text-decoration:none;
+    color:white;
+    position:relative;
+}
+
+.nav-links a::after{
+    content:'';
+    width:0;
+    height:3px;
+    background:#E10600;
+    position:absolute;
+    left:0;
+    bottom:-6px;
+    transition:.3s;
+}
+
+.nav-links a:hover::after{
+    width:100%;
+}
+
+/* =====================
+   HERO SECTION
+===================== */
+
+.hero{
+    height:100vh;
+
+    background:
+    linear-gradient(
+        rgba(0,0,0,0.75),
+        rgba(0,0,0,0.75)
+    ),
+    url('../images/hero-bg.jpg');
+
+    background-size:cover;
+    background-position:center;
+    background-repeat:no-repeat;
+
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    text-align:center;
+
+    position:relative;
+    overflow:hidden;
+}
+
+.hero-content{
+    max-width:900px;
+    padding:0 20px;
+}
+
+.hero-content h1{
+    font-size:4.5rem;
+    color:#E10600;
+    font-family:'Orbitron',sans-serif;
+
+    text-shadow:
+        0 0 10px rgba(225,6,0,0.5),
+        0 0 25px rgba(225,6,0,0.4);
+
+    margin-bottom:20px;
+}
+
+.hero-content p{
+    font-size:1.2rem;
+    line-height:1.8;
+    color:#e0e0e0;
+
+    max-width:800px;
+    margin:0 auto 30px;
+}
+
+.hero-btn{
+    display:inline-block;
+
+    text-decoration:none;
+    background:#E10600;
+    padding:15px 35px;
+    border-radius:30px;
+    color:white;
+
+    transition:.3s;
+}
+
+.hero-btn:hover{
+    transform:translateY(-3px);
+    box-shadow:0 0 25px #E10600;
+}
+
+/* =====================
+   HERO STATS
+===================== */
+
+.hero-stats{
+    display:flex;
+    justify-content:center;
+    gap:30px;
+    flex-wrap:wrap;
+
+    margin-top:40px;
+    margin-bottom:40px;
+}
+
+.stat{
+    background:rgba(255,255,255,0.08);
+    backdrop-filter:blur(8px);
+
+    padding:20px 30px;
+    border-radius:15px;
+
+    min-width:140px;
+
+    border:1px solid rgba(225,6,0,0.3);
+
+    transition:.3s ease;
+}
+
+.stat:hover{
+    transform:translateY(-5px);
+    border-color:#E10600;
+    box-shadow:0 0 20px rgba(225,6,0,0.4);
+}
+
+.stat span{
+    display:block;
+
+    font-size:2rem;
+    font-weight:700;
+    color:#E10600;
+
+    font-family:'Orbitron',sans-serif;
+}
+
+.stat p{
+    margin-top:8px;
+    margin-bottom:0;
+
+    color:#d0d0d0;
+    font-size:0.95rem;
+}
+
+/* =====================
+   SCROLL INDICATOR
+===================== */
+
+.scroll-down{
+    position:absolute;
+    bottom:30px;
+    left:50%;
+
+    transform:translateX(-50%);
+
+    font-size:2rem;
+    color:#E10600;
+
+    animation:bounce 2s infinite;
+}
+
+@keyframes bounce{
+
+    0%,20%,50%,80%,100%{
+        transform:translateX(-50%) translateY(0);
+    }
+
+    40%{
+        transform:translateX(-50%) translateY(-10px);
+    }
+
+    60%{
+        transform:translateX(-50%) translateY(-5px);
+    }
+}
+
+/* =====================
+   GENERAL SECTIONS
+===================== */
+
+section{
+    padding:80px 8%;
+}
+
+h2{
+    text-align:center;
+    margin-bottom:40px;
+    color:#E10600;
+}
+
+/* =====================
+   NAVIGATION CARDS
+===================== */
+
+.card-container{
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+    gap:30px;
+}
+
+.card{
+    background:#1E1E1E;
+    padding:40px;
+    border-radius:20px;
+    text-decoration:none;
+    color:white;
+    transition:.4s ease;
+}
+
+.card:hover{
+    transform:translateY(-10px);
+    box-shadow:0 0 20px #E10600;
+}
+
+/* =====================
+   WHY WATCH
+===================== */
+
+.why-grid{
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(300px,1fr));
+    gap:30px;
+}
+
+/* =====================
+   FEATURED SECTION
+===================== */
+
+.featured{
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(300px,1fr));
+    gap:30px;
+    align-items:stretch;
+}
+
+.reason,
+.featured-box,
+.race-box{
+    background:#1E1E1E;
+    padding:30px;
+    border-radius:20px;
+}
+
+.featured-box{
+    display:flex;
+    flex-direction:column;
+    transition:.4s ease;
+}
+
+.featured-box:hover{
+    transform:translateY(-8px);
+    box-shadow:0 0 20px rgba(225,6,0,0.5);
+}
+
+.featured-image{
+    height:500px;
+    overflow:hidden;
+    border-radius:15px;
+    margin:20px 0;
+}
+
+.featured-image img{
+    width:100%;
+    height:100%;
+    object-fit:cover;
+    transition:.5s ease;
+}
+
+.featured-box:hover img{
+    transform:scale(1.08);
+}
+
+/* =====================
+   UPCOMING RACE
+===================== */
+
+.race-box{
+    max-width:500px;
+    margin:auto;
+    text-align:center;
+}
+
+/* =====================
+   FOOTER
+===================== */
+
+footer{
+    background:#111;
+    text-align:center;
+    padding:25px;
+}
