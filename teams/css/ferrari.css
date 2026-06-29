@@ -303,7 +303,7 @@ nav a:hover::after {
 
      display: grid;
 
-     grid-template-columns: 300px 1fr;
+     grid-template-columns: 350px 1fr;
 
      gap: 45px;
 
@@ -315,9 +315,9 @@ nav a:hover::after {
 
      background: linear-gradient(145deg, var(--card), #111);
 
-     padding: 40px;
+     padding: 25px;
 
-     border-radius: 25px;
+     border-radius: 30px;
 
      display: flex;
 
@@ -335,7 +335,7 @@ nav a:hover::after {
 
 .logo-card img {
 
-     width: 170px;
+     width: 320px;
 
 }
 
@@ -343,7 +343,7 @@ nav a:hover::after {
 
      background: linear-gradient(145deg, var(--card), var(--card2));
 
-     padding: 45px;
+     padding: 40px;
 
      border-radius: 25px;
 
@@ -887,7 +887,7 @@ GALLERY
 
      display: grid;
 
-     grid-template-columns: repeat(3, 1fr);
+     grid-template-columns: repeat(2, 1fr);
 
      gap: 25px;
 
@@ -922,6 +922,15 @@ GALLERY
 /*==========================
 FACTS
 ==========================*/
+.facts h2 {
+
+     text-align: center;
+
+     color: var(--ferrari-red);
+
+     margin-bottom: 50px;
+
+}    
 
 .fact-grid {
 
@@ -959,7 +968,7 @@ FACTS
 
      margin: 20px 0;
 
-     color: var(--ferrari-red);
+     color: var(--ferrari-yellow);
      margin-bottom: 40px;
 
 }
