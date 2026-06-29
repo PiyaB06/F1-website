@@ -4,105 +4,105 @@ const races = [
         round: 8,
         name: "Austrian Grand Prix",
         location: "Spielberg • Red Bull Ring",
-        date: "2026-06-26T13:00:00"
+        date: "2026-06-28T13:00:00Z"
     },
 
     {
         round: 9,
         name: "British Grand Prix",
         location: "Silverstone",
-        date: "2026-07-03T13:00:00"
+        date: "2026-07-05T13:00:00Z"
     },
 
     {
         round: 10,
         name: "Belgian Grand Prix",
         location: "Spa-Francorchamps",
-        date: "2026-07-17T13:00:00"
+        date: "2026-07-19T13:00:00Z"
     },
 
     {
         round: 11,
         name: "Hungarian Grand Prix",
         location: "Budapest",
-        date: "2026-07-24T13:00:00"
+        date: "2026-07-26T13:00:00Z"
     },
 
     {
         round: 12,
         name: "Dutch Grand Prix",
         location: "Zandvoort",
-        date: "2026-08-21T13:00:00"
+        date: "2026-08-21T13:00:00Z"
     },
 
     {
         round: 13,
         name: "Italian Grand Prix",
         location: "Monza",
-        date: "2026-09-04T13:00:00"
+        date: "2026-09-06T13:00:00Z"
     },
 
     {
         round: 14,
         name: "Spanish Grand Prix",
         location: "Madrid",
-        date: "2026-09-11T13:00:00"
+        date: "2026-09-13T13:00:00Z"
     },
 
     {
         round: 15,
         name: "Azerbaijan Grand Prix",
         location: "Baku",
-        date: "2026-09-24T13:00:00"
+        date: "2026-09-26T13:00:00Z"
     },
 
     {
         round: 16,
         name: "Singapore Grand Prix",
         location: "Singapore",
-        date: "2026-10-09T13:00:00"
+        date: "2026-10-09T11:00:00Z"
     },
 
     {
         round: 17,
         name: "United States Grand Prix",
         location: "Austin",
-        date: "2026-10-23T13:00:00"
+        date: "2026-10-25T13:00:00Z"
     },
 
     {
         round: 18,
         name: "Mexico City Grand Prix",
         location: "Mexico City",
-        date: "2026-10-30T13:00:00"
+        date: "2026-10-01T13:00:00Z"
     },
 
     {
         round: 19,
         name: "São Paulo Grand Prix",
         location: "Brazil",
-        date: "2026-11-06T13:00:00"
+        date: "2026-11-08T13:00:00Z"
     },
 
     {
         round: 20,
         name: "Las Vegas Grand Prix",
         location: "Las Vegas",
-        date: "2026-11-19T13:00:00"
+        date: "2026-11-21T13:00:00Z"
     },
 
     {
         round: 21,
         name: "Qatar Grand Prix",
         location: "Lusail",
-        date: "2026-11-27T13:00:00"
+        date: "2026-11-29T13:00:00Z"
     },
 
     {
         round: 22,
         name: "Abu Dhabi Grand Prix",
         location: "Yas Marina",
-        date: "2026-12-04T13:00:00"
+        date: "2026-12-06T13:00:00Z"
     }
 ];
 

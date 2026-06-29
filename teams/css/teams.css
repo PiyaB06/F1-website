@@ -54,7 +54,7 @@ nav{
         rgba(0,0,0,.8),
         rgba(0,0,0,.8)
     ),
-    url('../../images/hero-bg.jpg');
+    url('../../images/hero-bg1.jpg');
 
     background-size:cover;
     background-position:center;
@@ -76,46 +76,313 @@ nav{
     line-height:1.8;
 }
 
-/* TEAMS */
 
-section{
-    padding:80px 8%;
-}
 
-h2{
-    text-align:center;
-    color:#E10600;
-    margin-bottom:50px;
+/* =====================
+   TEAMS GRID
+===================== */
+
+.teams-grid{
+    padding:80px 5%;
 }
 
 .team-container{
     display:grid;
-    grid-template-columns:
-    repeat(auto-fit,minmax(300px,1fr));
-
-    gap:30px;
+    grid-template-columns:repeat(3, minmax(320px, 1fr));
+    gap:35px;
 }
 
+/* =====================
+   TEAM CARDS
+===================== */
+
 .team-card{
-    background:#1E1E1E;
+    position:relative;
+
+    min-height:320px;
 
     padding:35px;
-    border-radius:20px;
+
+    border-radius:24px;
 
     text-decoration:none;
     color:white;
 
-    transition:.4s;
-}
+    overflow:hidden;
 
-.team-card h3{
-    color:#E10600;
-    margin-bottom:15px;
+    transition:.4s ease;
+
+    background:#181818;
+
+    border:2px solid transparent;
 }
 
 .team-card:hover{
     transform:translateY(-10px);
+}
 
-    box-shadow:
-    0 0 20px rgba(225,6,0,.5);
+/* =====================
+   BACKGROUND IMAGE
+===================== */
+
+.team-card::before{
+    content:"";
+
+    position:absolute;
+    inset:0;
+
+    background-position:center;
+    background-size:cover;
+    background-repeat:no-repeat;
+
+    opacity:.12;
+
+    transition:.4s ease;
+}
+
+.team-card:hover::before{
+    opacity:.18;
+    transform:scale(1.05);
+}
+
+/* =====================
+   CONTENT
+===================== */
+
+.team-content{
+    position:relative;
+    z-index:2;
+}
+
+.team-name{
+    font-size:2rem;
+    font-family:'Orbitron',sans-serif;
+    margin-bottom:15px;
+}
+
+.team-info{
+    line-height:1.8;
+    color:#d0d0d0;
+}
+
+.team-info strong{
+    color:white;
+}
+
+
+/* =====================
+   TEAM THEMES
+===================== */
+
+/* McLaren */
+
+.mclaren{
+    border-color:#FF8700;
+}
+
+.mclaren .team-name{
+    color:#FF8700;
+}
+
+/* Ferrari */
+
+.ferrari{
+    border-color:#DC0000;
+}
+
+.ferrari .team-name{
+    color:#DC0000;
+}
+
+/* Mercedes */
+
+.mercedes{
+    border-color:#00D2BE;
+}
+
+.mercedes .team-name{
+    color:#00D2BE;
+}
+
+/* Red Bull */
+
+.redbull{
+    border-color:#1E41FF;
+}
+
+.redbull .team-name{
+    color:#1E41FF;
+}
+
+/* Aston Martin */
+
+.aston{
+    border-color:#006F62;
+}
+
+.aston .team-name{
+    color:#006F62;
+}
+
+/* Alpine */
+
+.alpine{
+    border-color:#FF87BC;
+}
+
+.alpine .team-name{
+    color:#FF87BC;
+}
+
+/* Haas */
+
+.haas{
+    border-color:#B6BABD;
+}
+
+.haas .team-name{
+    color:#B6BABD;
+}
+
+/* Racing Bulls */
+
+.racingbulls{
+    border-color:#6692FF;
+}
+
+.racingbulls .team-name{
+    color:#6692FF;
+}
+
+/* Williams */
+
+.williams{
+    border-color:#005AFF;
+}
+
+.williams .team-name{
+    color:#005AFF;
+}
+
+/* Sauber */
+
+.sauber{
+    border-color:#52E252;
+}
+
+.sauber .team-name{
+    color:#52E252;
+}
+
+/* Cadillac */
+
+.cadillac{
+    border-color:#C0C0C0;
+}
+
+.cadillac .team-name{
+    color:#C0C0C0;
+}
+
+/* McLaren */
+.mclaren:hover{
+    box-shadow:0 0 25px rgba(255,135,0,.4);
+}
+
+/* Ferrari */
+.ferrari:hover{
+    box-shadow:0 0 25px rgba(220,0,0,.4);
+}
+
+/* Mercedes */
+.mercedes:hover{
+    box-shadow:0 0 25px rgba(0,210,190,.4);
+}
+
+/* Red Bull */
+.redbull:hover{
+    box-shadow:0 0 25px rgba(30,65,255,.4);
+}
+
+/* Aston */
+.aston:hover{
+    box-shadow:0 0 25px rgba(0,111,98,.4);
+}
+
+/* Alpine */
+.alpine:hover{
+    box-shadow:0 0 25px rgba(255,135,188,.4);
+}
+
+/* Haas */
+.haas:hover{
+    box-shadow:0 0 25px rgba(182,186,189,.4);
+}
+
+/* Racing Bulls */
+.racingbulls:hover{
+    box-shadow:0 0 25px rgba(102,146,255,.4);
+}
+
+/* Williams */
+.williams:hover{
+    box-shadow:0 0 25px rgba(0,90,255,.4);
+}
+
+/* Sauber */
+.sauber:hover{
+    box-shadow:0 0 25px rgba(82,226,82,.4);
+}
+
+/* Cadillac */
+.cadillac:hover{
+    box-shadow:0 0 25px rgba(192,192,192,.4);
+}
+
+/* =====================
+   TEAM BACKGROUND IMAGES
+===================== */
+
+.mclaren::before{
+    background-image:url('../../images/teams/mclaren_logo.jpg');
+}
+
+.ferrari::before{
+    background-image:url('../../images/teams/ferrari.png');
+}
+
+.mercedes::before{
+    background-image:url('../../images/teams/mercedes.png');
+}
+
+.redbull::before{
+    background-image:url('../../images/teams/redbull.png');
+}
+
+.aston::before{
+    background-image:url('../../images/teams/astonmartin.png');
+}
+
+.alpine::before{
+    background-image:url('../../images/teams/alpine.png');
+}
+
+.haas::before{
+    background-image:url('../../images/teams/haas.png');
+}
+
+.racingbulls::before{
+    background-image:url('../../images/teams/racingbulls.png');
+}
+
+.williams::before{
+    background-image:url('../../images/teams/williams.png');
+}
+
+.sauber::before{
+    background-image:url('../../images/teams/sauber.png');
+}
+
+.cadillac::before{
+    background-image:url('../../images/teams/cadillac.png');
 }
