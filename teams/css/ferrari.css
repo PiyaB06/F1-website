@@ -901,15 +901,16 @@ GALLERY
 
 }
 
-.gallery-item img {
+.gallery-item img{
 
-     width: 100%;
+    display:block;
 
-     height: 350px;
+    width:100%;
+    height:450px;
 
-     object-fit: cover;
+    object-fit:cover;
 
-     transition: .5s;
+    transition:.55s ease;
 
 }
 
@@ -981,7 +982,7 @@ FACTS
 
     text-align:center;
 
-    color:var(--papaya);
+    color:var(--ferrari-red);
 
     margin-bottom:45px;
 
@@ -997,7 +998,9 @@ FACTS
 
 }
 
-/* Base Card */
+/*----------------------------------
+Base Card
+-----------------------------------*/
 
 .related-card{
 
@@ -1007,19 +1010,164 @@ FACTS
 
     padding:35px;
 
-    border-radius:22px;
+    border-radius:24px;
 
     text-decoration:none;
 
     color:white;
 
+    transition:.4s ease;
+
+    border:2px solid transparent;
+
     background:#181818;
 
-    border:1px solid rgba(255,255,255,.08);
+}
 
-    transition:.35s ease;
+.related-card h3{
+
+    font-size:1.7rem;
+
+    margin-bottom:12px;
+
+    transition:.35s;
 
 }
+
+.related-card p{
+
+    color:#d8d8d8;
+
+    transition:.35s;
+
+}
+
+/*----------------------------------
+McLaren
+-----------------------------------*/
+
+.mclaren-card{
+
+    background:
+
+        linear-gradient(rgba(20,20,20,.88),
+        rgba(20,20,20,.88)),
+
+        url("../../images/mclaren/hero.jpg");
+
+    background-size:cover;
+
+    background-position:center;
+
+    border-color:#FF8000;
+
+}
+
+.mclaren-card h3{
+
+    color:#FF8000;
+
+}
+
+.mclaren-card:hover{
+
+    transform:translateY(-10px);
+
+    box-shadow:0 0 25px rgba(255,128,0,.45);
+
+}
+
+.mclaren-card:hover h3{
+
+    color:#FFD54A;
+
+}
+
+/*----------------------------------
+Mercedes
+-----------------------------------*/
+
+.mercedes-card{
+
+    background:
+
+        linear-gradient(rgba(18,18,18,.88),
+        rgba(18,18,18,.88)),
+
+        url("../../images/mercedes/hero.jpg");
+
+    background-size:cover;
+
+    background-position:center;
+
+    border-color:#00D2BE;
+
+}
+
+.mercedes-card h3{
+
+    color:#00D2BE;
+
+}
+
+.mercedes-card:hover{
+
+    transform:translateY(-10px);
+
+    box-shadow:0 0 25px rgba(0,210,190,.45);
+
+}
+
+.mercedes-card:hover h3{
+
+    color:white;
+
+}
+
+/*----------------------------------
+Red Bull
+-----------------------------------*/
+
+.redbull-card{
+
+    background:
+
+        linear-gradient(rgba(10,15,35,.90),
+        rgba(10,15,35,.90)),
+
+        url("../../images/redbull/hero.jpg");
+
+    background-size:cover;
+
+    background-position:center;
+
+    border-color:#1E5BC6;
+
+}
+
+.redbull-card h3{
+
+    color:#4EA1FF;
+
+}
+
+.redbull-card:hover{
+
+    transform:translateY(-10px);
+
+    box-shadow:0 0 25px rgba(30,91,198,.45);
+
+}
+
+.redbull-card:hover h3{
+
+    color:#FFD700;
+
+}
+
+/*----------------------------------
+Hover Shine Animation
+-----------------------------------*/
 
 .related-card::before{
 
@@ -1027,146 +1175,50 @@ FACTS
 
     position:absolute;
 
-    inset:0;
+    top:0;
+    left:-100%;
 
-    opacity:0;
+    width:100%;
+    height:100%;
 
-    transition:.35s ease;
+    background:linear-gradient(
 
-    z-index:0;
+        120deg,
 
-}
+        transparent,
 
-.related-card h3,
-.related-card p{
+        rgba(255,255,255,.12),
 
-    position:relative;
+        transparent
 
-    z-index:2;
+    );
 
-}
-
-.related-card h3{
-
-    margin-bottom:12px;
-
-    font-size:1.5rem;
-
-}
-
-.related-card p{
-
-    color:#d6d6d6;
-
-}
-
-.related-card:hover{
-
-    transform:translateY(-10px);
-
-    box-shadow:0 0 25px rgba(255,255,255,.15);
+    transition:.7s;
 
 }
 
 .related-card:hover::before{
 
-    opacity:1;
+    left:100%;
 
 }
 
-/*==============================
-        FERRARI
-==============================*/
+.related-card:hover p{
 
-.related-card.ferrari{
-
-    border-left:6px solid #DC0000;
+    color:white;
 
 }
+/*----------------------------------
+Responsive
+-----------------------------------*/
 
-.related-card.ferrari h3{
+@media(max-width:900px){
 
-    color:#DC0000;
+    .related-grid{
 
-}
+        grid-template-columns:1fr;
 
-.related-card.ferrari::before{
-
-    background:linear-gradient(
-        135deg,
-        rgba(220,0,0,.25),
-        rgba(247,209,23,.08)
-    );
-
-}
-
-.related-card.ferrari:hover{
-
-    box-shadow:0 0 25px rgba(220,0,0,.35);
-
-}
-
-/*==============================
-        MERCEDES
-==============================*/
-
-.related-card.mercedes{
-
-    border-left:6px solid #00D2BE;
-
-}
-
-.related-card.mercedes h3{
-
-    color:#00D2BE;
-
-}
-
-.related-card.mercedes::before{
-
-    background:linear-gradient(
-        135deg,
-        rgba(0,210,190,.25),
-        rgba(255,255,255,.08)
-    );
-
-}
-
-.related-card.mercedes:hover{
-
-    box-shadow:0 0 25px rgba(0,210,190,.35);
-
-}
-
-/*==============================
-        RED BULL
-==============================*/
-
-.related-card.redbull{
-
-    border-left:6px solid #1E41FF;
-
-}
-
-.related-card.redbull h3{
-
-    color:#1E41FF;
-
-}
-
-.related-card.redbull::before{
-
-    background:linear-gradient(
-        135deg,
-        rgba(30,65,255,.28),
-        rgba(255,204,0,.08)
-    );
-
-}
-
-.related-card.redbull:hover{
-
-    box-shadow:0 0 25px rgba(30,65,255,.35);
+    }
 
 }
 

@@ -928,18 +928,18 @@ RESPONSIVE
 
 }
 
-.gallery-item img {
+.gallery-item img{
 
-     width: 100%;
+    display:block;
 
-     height: 360px;
+    width:100%;
+    height:40px;
 
-     object-fit: cover;
+    object-fit:cover;
 
-     transition: .55s ease;
+    transition:.55s ease;
 
 }
-
 .gallery-item:hover img {
 
      transform: scale(1.08);

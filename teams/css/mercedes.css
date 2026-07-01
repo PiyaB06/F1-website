@@ -1,0 +1,1617 @@
+/*==================================================
+                MERCEDES THEME
+==================================================*/
+
+:root{
+
+    --mercedes:#00D2BE;
+    --silver:#C8C8C8;
+    --silver-light:#E8E8E8;
+    --dark:#090909;
+
+    --card:#141414;
+    --card2:#1D1D1D;
+
+    --text:#F4F4F4;
+    --muted:#BDBDBD;
+
+}
+
+/*==================================================
+GLOBAL
+==================================================*/
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+html{
+
+    scroll-behavior:smooth;
+
+}
+
+body{
+
+    font-family:'Poppins',sans-serif;
+
+    color:var(--text);
+
+    overflow-x:hidden;
+
+    background:
+        radial-gradient(circle at top,
+        rgba(0,210,190,.12),
+        transparent 35%),
+
+        linear-gradient(
+        #0a0a0a,
+        #080808 35%,
+        #050505);
+
+}
+
+section{
+
+    padding:100px 8%;
+
+}
+
+h2{
+
+    font-family:'Orbitron',sans-serif;
+
+}
+
+/*==================================================
+NAVBAR
+==================================================*/
+
+nav{
+
+    position:fixed;
+
+    top:0;
+    left:0;
+
+    width:100%;
+
+    z-index:999;
+
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+
+    padding:22px 8%;
+
+    background:rgba(8,8,8,.88);
+
+    backdrop-filter:blur(18px);
+
+    border-bottom:1px solid rgba(0,210,190,.15);
+
+}
+
+.logo{
+
+    color:var(--mercedes);
+
+    font-family:'Orbitron',sans-serif;
+
+    font-size:2rem;
+
+    font-weight:700;
+
+    letter-spacing:2px;
+
+}
+
+nav ul{
+
+    display:flex;
+
+    list-style:none;
+
+    gap:35px;
+
+}
+
+nav a{
+
+    text-decoration:none;
+
+    color:white;
+
+    position:relative;
+
+    transition:.35s;
+
+}
+
+nav a::after{
+
+    content:"";
+
+    position:absolute;
+
+    left:0;
+    bottom:-6px;
+
+    width:0;
+    height:2px;
+
+    background:var(--mercedes);
+
+    transition:.35s;
+
+}
+
+nav a:hover{
+
+    color:var(--mercedes);
+
+}
+
+nav a:hover::after{
+
+    width:100%;
+
+}
+
+/*==================================================
+HERO
+==================================================*/
+
+.hero{
+
+    height:100vh;
+
+    display:flex;
+
+    justify-content:center;
+
+    align-items:center;
+
+    text-align:center;
+
+    position:relative;
+
+    overflow:hidden;
+
+    background:
+
+        linear-gradient(
+        rgba(0,0,0,.70),
+        rgba(0,0,0,.82)),
+
+        url("../../images/mercedes/hero.jpg");
+
+    background-size:cover;
+
+    background-position:center;
+
+    background-attachment:fixed;
+
+}
+
+/* Dark overlay */
+
+.hero::before{
+
+    content:"";
+
+    position:absolute;
+
+    inset:0;
+
+    background:
+
+        radial-gradient(circle,
+        rgba(0,210,190,.15),
+        transparent 65%);
+
+}
+
+/* Hexagon pattern */
+
+.hero::after{
+
+    content:"";
+
+    position:absolute;
+
+    inset:0;
+
+    opacity:.08;
+
+    background-image:
+        linear-gradient(30deg, transparent 24%, rgba(255,255,255,.15) 25%, rgba(255,255,255,.15) 26%, transparent 27%, transparent 74%, rgba(255,255,255,.15) 75%, rgba(255,255,255,.15) 76%, transparent 77%, transparent),
+        linear-gradient(-30deg, transparent 24%, rgba(255,255,255,.15) 25%, rgba(255,255,255,.15) 26%, transparent 27%, transparent 74%, rgba(255,255,255,.15) 75%, rgba(255,255,255,.15) 76%, transparent 77%, transparent);
+
+    background-size:70px 120px;
+
+}
+
+.hero-content{
+
+    position:relative;
+
+    z-index:2;
+
+    max-width:900px;
+
+    padding:0 20px;
+
+}
+
+.hero h1{
+
+    font-size:5rem;
+
+    font-family:'Orbitron',sans-serif;
+
+    color:var(--silver-light);
+
+    text-shadow:
+
+        0 0 10px rgba(255,255,255,.25),
+
+        0 0 35px rgba(0,210,190,.30);
+
+}
+
+.team-small{
+
+    color:var(--mercedes);
+
+    letter-spacing:5px;
+
+    text-transform:uppercase;
+
+    margin:20px 0;
+
+    font-weight:600;
+
+}
+
+.hero h3{
+
+    margin-top:20px;
+
+    font-size:2rem;
+
+    font-weight:300;
+
+    color:white;
+
+}
+
+.hero-tags{
+
+    display:flex;
+
+    justify-content:center;
+
+    flex-wrap:wrap;
+
+    gap:18px;
+
+    margin-top:35px;
+
+}
+
+.hero-tags span{
+
+    padding:12px 24px;
+
+    border-radius:40px;
+
+    background:rgba(0,210,190,.08);
+
+    border:1px solid rgba(0,210,190,.25);
+
+    backdrop-filter:blur(12px);
+
+    transition:.35s;
+
+}
+
+.hero-tags span:hover{
+
+    transform:translateY(-5px);
+
+    background:rgba(0,210,190,.18);
+
+    box-shadow:0 0 20px rgba(0,210,190,.20);
+
+}
+
+/*==================================================
+OVERVIEW
+==================================================*/
+
+.overview{
+
+    display:grid;
+
+    grid-template-columns:340px 1fr;
+
+    gap:50px;
+
+    align-items:center;
+
+}
+
+.logo-card{
+
+    background:linear-gradient(
+        145deg,
+        #171717,
+        #101010);
+
+    padding:30px;
+
+    border-radius:28px;
+
+    display:flex;
+
+    justify-content:center;
+
+    align-items:center;
+
+    border:1px solid rgba(0,210,190,.15);
+
+    box-shadow:
+
+        0 0 25px rgba(0,210,190,.12);
+
+}
+
+.logo-card img{
+
+    width:290px;
+
+}
+
+.info-card{
+
+    background:linear-gradient(
+        145deg,
+        var(--card),
+        var(--card2));
+
+    padding:40px;
+
+    border-radius:25px;
+
+    border:1px solid rgba(0,210,190,.15);
+
+}
+
+.info-card h2{
+
+    color:var(--mercedes);
+
+    margin-bottom:35px;
+
+}
+
+.info-grid{
+
+    display:grid;
+
+    grid-template-columns:repeat(2,1fr);
+
+    gap:25px;
+
+}
+
+.info-grid div{
+
+    padding:20px;
+
+    border-radius:16px;
+
+    background:#181818;
+
+    border:1px solid transparent;
+
+    transition:.35s;
+
+}
+
+.info-grid div:hover{
+
+    transform:translateY(-5px);
+
+    border-color:rgba(0,210,190,.35);
+
+    box-shadow:0 0 18px rgba(0,210,190,.15);
+
+}
+
+.info-grid h4{
+
+    color:var(--silver-light);
+
+    margin-bottom:8px;
+
+}
+
+.info-grid p{
+
+    color:var(--muted);
+
+}
+
+/*==================================================
+ABOUT
+==================================================*/
+
+.about-team{
+
+    max-width:1050px;
+
+    margin:auto;
+
+    text-align:center;
+
+}
+
+.about-team h2{
+
+    color:var(--mercedes);
+
+    font-size:2.6rem;
+
+    margin-bottom:35px;
+
+}
+
+.about-team p{
+
+    color:#d7d7d7;
+
+    line-height:2;
+
+    font-size:1.08rem;
+
+}
+
+/*==================================================
+    DRIVERS
+==================================================*/
+
+.drivers h2{
+
+    text-align:center;
+
+    color:var(--mercedes);
+
+    font-size:2.6rem;
+
+    margin-bottom:50px;
+
+}
+
+.driver-grid{
+
+    display:grid;
+
+    grid-template-columns:repeat(2,1fr);
+
+    gap:40px;
+
+}
+
+.driver-card{
+
+    position:relative;
+
+    overflow:hidden;
+
+    background:linear-gradient(
+        145deg,
+        rgba(24,24,24,.95),
+        rgba(18,18,18,.95)
+    );
+
+    border-radius:24px;
+
+    text-decoration:none;
+
+    color:white;
+
+    border:1px solid rgba(0,210,190,.15);
+
+    transition:.45s ease;
+
+}
+
+.driver-card::before{
+
+    content:"";
+
+    position:absolute;
+
+    inset:0;
+
+    background:linear-gradient(
+        135deg,
+        transparent,
+        rgba(0,210,190,.08),
+        transparent
+    );
+
+    opacity:0;
+
+    transition:.45s;
+
+}
+
+.driver-card:hover::before{
+
+    opacity:1;
+
+}
+
+.driver-card:hover{
+
+    transform:translateY(-10px);
+
+    border-color:rgba(0,210,190,.45);
+
+    box-shadow:
+        0 0 30px rgba(0,210,190,.25);
+
+}
+
+.driver-image{
+
+    height:390px;
+
+    overflow:hidden;
+
+}
+
+.driver-image img{
+
+    width:100%;
+    height:100%;
+
+    object-fit:cover;
+
+    transition:.6s ease;
+
+}
+
+.driver-card:hover img{
+
+    transform:scale(1.08);
+
+}
+
+.driver-content{
+
+    padding:28px;
+
+}
+
+.driver-content h3{
+
+    color:var(--silver-light);
+
+    font-size:1.75rem;
+
+    margin-bottom:10px;
+
+}
+
+.driver-content p{
+
+    color:var(--muted);
+
+    margin-bottom:18px;
+
+}
+
+.driver-content span{
+
+    color:var(--mercedes);
+
+    font-weight:600;
+
+}
+
+.driver-card:hover span{
+
+    letter-spacing:1px;
+
+}
+
+/*==================================================
+    MERCEDES W17
+==================================================*/
+
+.car-section{
+
+    display:grid;
+
+    grid-template-columns:1fr 1fr;
+
+    gap:70px;
+
+    align-items:center;
+
+}
+
+.car-text h2{
+
+    color:var(--mercedes);
+
+    font-size:2.6rem;
+
+    margin-bottom:25px;
+
+}
+
+.car-text p{
+
+    color:#d8d8d8;
+
+    line-height:2;
+
+}
+
+.car-image{
+
+    display:flex;
+
+    justify-content:center;
+
+    align-items:center;
+
+}
+
+.car-image img{
+
+    width:100%;
+
+    max-width:700px;
+
+    transition:.5s ease;
+
+    filter:drop-shadow(0 0 20px rgba(0,210,190,.18));
+
+}
+
+.car-image img:hover{
+
+    transform:scale(1.03);
+
+    filter:drop-shadow(0 0 35px rgba(0,210,190,.35));
+
+}
+
+/*==================================================
+    TEAM RECORDS
+==================================================*/
+
+.records h2{
+
+    text-align:center;
+
+    color:var(--mercedes);
+
+    margin-bottom:50px;
+
+    font-size:2.5rem;
+
+}
+
+.record-grid{
+
+    display:grid;
+
+    grid-template-columns:repeat(auto-fit,minmax(220px,1fr));
+
+    gap:30px;
+
+}
+
+.record-card{
+
+    background:linear-gradient(
+        145deg,
+        #161616,
+        #202020
+    );
+
+    border-radius:22px;
+
+    padding:35px;
+
+    text-align:center;
+
+    border:1px solid rgba(0,210,190,.12);
+
+    transition:.4s ease;
+
+}
+
+.record-card:hover{
+
+    transform:translateY(-10px);
+
+    border-color:rgba(0,210,190,.45);
+
+    box-shadow:
+        0 0 28px rgba(0,210,190,.28);
+
+}
+
+.record-card span{
+
+    display:block;
+
+    font-size:2.8rem;
+
+    font-family:'Orbitron',sans-serif;
+
+    color:var(--mercedes);
+
+    margin-bottom:15px;
+
+}
+
+.record-card p{
+
+    color:#d2d2d2;
+
+    line-height:1.7;
+
+}
+
+/*==================================================
+    SCROLLBAR
+==================================================*/
+
+::-webkit-scrollbar{
+
+    width:10px;
+
+}
+
+::-webkit-scrollbar-track{
+
+    background:#111;
+
+}
+
+::-webkit-scrollbar-thumb{
+
+    background:var(--mercedes);
+
+    border-radius:10px;
+
+}
+
+::-webkit-scrollbar-thumb:hover{
+
+    background:#34f5df;
+
+}
+
+/*==================================================
+    RESPONSIVE
+==================================================*/
+
+@media(max-width:950px){
+
+    .driver-grid{
+
+        grid-template-columns:1fr;
+
+    }
+
+    .car-section{
+
+        grid-template-columns:1fr;
+
+    }
+
+}
+
+@media(max-width:850px){
+
+    .overview{
+
+        grid-template-columns:1fr;
+
+    }
+
+    .info-grid{
+
+        grid-template-columns:1fr;
+
+    }
+
+}
+
+@media(max-width:700px){
+
+    .hero h1{
+
+        font-size:3.2rem;
+
+    }
+
+    .hero h3{
+
+        font-size:1.4rem;
+
+    }
+
+    .hero-tags{
+
+        flex-direction:column;
+
+        align-items:center;
+
+    }
+
+    .driver-image{
+
+        height:320px;
+
+    }
+
+    .logo-card img{
+
+        width:220px;
+
+    }
+
+}
+
+@media(max-width:500px){
+
+    section{
+
+        padding:80px 6%;
+
+    }
+
+    .hero h1{
+
+        font-size:2.5rem;
+
+    }
+
+    .team-small{
+
+        font-size:.95rem;
+
+        letter-spacing:2px;
+
+    }
+
+}
+
+/*==================================================
+    TIMELINE
+==================================================*/
+
+.timeline h2{
+
+    text-align:center;
+    color:var(--mercedes);
+
+    margin-bottom:60px;
+
+}
+
+.timeline-container{
+
+    max-width:900px;
+    margin:auto;
+
+    padding-left:40px;
+
+    border-left:4px solid var(--mercedes);
+
+}
+
+.timeline-item{
+
+    position:relative;
+
+    margin-bottom:60px;
+
+}
+
+.timeline-item::before{
+
+    content:"";
+
+    position:absolute;
+
+    width:18px;
+    height:18px;
+
+    left:-50px;
+    top:8px;
+
+    border-radius:50%;
+
+    background:var(--mercedes);
+
+    box-shadow:
+        0 0 15px rgba(0,210,190,.5);
+
+}
+
+.timeline-item h3{
+
+    color:var(--silver-light);
+
+    margin-bottom:12px;
+
+    font-size:1.4rem;
+
+    font-family:'Orbitron',sans-serif;
+
+}
+
+.timeline-item p{
+
+    color:#d7d7d7;
+
+    line-height:1.9;
+
+}
+
+/*==================================================
+    MERCEDES INNOVATION LAB
+==================================================*/
+
+.innovation{
+
+    text-align:center;
+
+}
+
+.innovation h2{
+
+    color:var(--mercedes);
+
+    margin-bottom:20px;
+
+}
+
+.innovation-intro{
+
+    max-width:850px;
+
+    margin:0 auto 60px;
+
+    color:#d5d5d5;
+
+    line-height:2;
+
+}
+
+.innovation-grid{
+
+    display:grid;
+
+    grid-template-columns:repeat(auto-fit,minmax(280px,1fr));
+
+    gap:30px;
+
+}
+
+.innovation-card{
+
+    position:relative;
+
+    overflow:hidden;
+
+    background:
+        linear-gradient(
+            145deg,
+            #171717,
+            #101010);
+
+    border-radius:24px;
+
+    padding:35px;
+
+    border:1px solid rgba(0,210,190,.15);
+
+    transition:.45s ease;
+
+}
+
+.innovation-card::before{
+
+    content:"";
+
+    position:absolute;
+
+    top:0;
+    left:0;
+
+    width:100%;
+    height:4px;
+
+    background:
+        linear-gradient(
+            90deg,
+            var(--mercedes),
+            var(--silver-light));
+
+}
+
+.innovation-card::after{
+
+    content:"";
+
+    position:absolute;
+
+    inset:0;
+
+    background:
+        radial-gradient(circle at top right,
+        rgba(0,210,190,.08),
+        transparent 60%);
+
+    pointer-events:none;
+
+}
+
+.innovation-card:hover{
+
+    transform:translateY(-10px);
+
+    border-color:rgba(0,210,190,.45);
+
+    box-shadow:
+        0 0 30px rgba(0,210,190,.22);
+
+}
+
+.innovation-card h3{
+
+    color:var(--mercedes);
+
+    margin-bottom:20px;
+
+    font-family:'Orbitron',sans-serif;
+
+    font-size:1.3rem;
+
+}
+
+.innovation-card p{
+
+    color:#d6d6d6;
+
+    line-height:1.9;
+
+}
+
+/*==================================================
+    GALLERY
+==================================================*/
+
+.gallery h2{
+
+    text-align:center;
+
+    color:var(--mercedes);
+
+    margin-bottom:50px;
+
+}
+
+.gallery-grid{
+
+    display:grid;
+
+    grid-template-columns:repeat(2,1fr);
+
+    gap:25px;
+
+}
+
+.gallery-item{
+
+    overflow:hidden;
+
+    border-radius:22px;
+
+    background:#151515;
+
+    border:1px solid rgba(0,210,190,.15);
+
+    transition:.4s ease;
+
+}
+
+.gallery-item:hover{
+
+    transform:translateY(-8px);
+
+    box-shadow:
+        0 0 25px rgba(0,210,190,.25);
+
+}
+
+.gallery-item img{
+
+    display:block;
+
+    width:100%;
+    height:450px;
+
+    object-fit:cover;
+
+    transition:.55s ease;
+
+}
+
+.gallery-item:hover img{
+
+    transform:scale(1.08);
+
+}
+
+/*==================================================
+    DID YOU KNOW
+==================================================*/
+
+.facts h2{
+
+    text-align:center;
+
+    color:var(--mercedes);
+
+    margin-bottom:50px;
+
+}
+
+.fact-grid{
+
+    display:grid;
+
+    grid-template-columns:repeat(3,1fr);
+
+    gap:30px;
+
+}
+
+.fact-card{
+
+    position:relative;
+
+    overflow:hidden;
+
+    background:
+        linear-gradient(
+            145deg,
+            #151515,
+            #1f1f1f);
+
+    border-radius:22px;
+
+    padding:35px;
+
+    border:1px solid rgba(0,210,190,.15);
+
+    transition:.4s ease;
+
+}
+
+.fact-card::before{
+
+    content:"";
+
+    position:absolute;
+
+    top:0;
+    left:0;
+
+    width:100%;
+    height:4px;
+
+    background:
+        linear-gradient(
+            90deg,
+            var(--mercedes),
+            var(--silver-light));
+
+}
+
+.fact-card:hover{
+
+    transform:translateY(-10px);
+
+    border-color:rgba(0,210,190,.4);
+
+    box-shadow:
+        0 0 25px rgba(0,210,190,.25);
+
+}
+
+.fact-card h3{
+
+    color:var(--silver-light);
+
+    margin-bottom:20px;
+
+    font-family:'Orbitron',sans-serif;
+
+}
+
+.fact-card p{
+
+    color:#d7d7d7;
+
+    line-height:1.9;
+
+}
+
+/*==================================================
+    RELATED TEAMS
+==================================================*/
+
+.related h2{
+
+    text-align:center;
+
+    color:var(--mercedes);
+
+    margin-bottom:45px;
+
+}
+
+.related-grid{
+
+    display:grid;
+
+    grid-template-columns:repeat(3,1fr);
+
+    gap:30px;
+
+}
+
+/*----------------------------------
+Base Card
+-----------------------------------*/
+
+.related-card{
+
+    position:relative;
+
+    overflow:hidden;
+
+    padding:35px;
+
+    border-radius:24px;
+
+    text-decoration:none;
+
+    color:white;
+
+    transition:.4s ease;
+
+    border:2px solid transparent;
+
+    background:#181818;
+
+}
+
+.related-card h3{
+
+    font-size:1.7rem;
+
+    margin-bottom:12px;
+
+    transition:.35s;
+
+    font-family:'Orbitron',sans-serif;
+
+}
+
+.related-card p{
+
+    color:#d8d8d8;
+
+    transition:.35s;
+
+}
+
+/*----------------------------------
+Ferrari
+-----------------------------------*/
+
+.ferrari-card{
+
+    background:
+
+        linear-gradient(rgba(20,20,20,.88),
+        rgba(20,20,20,.88)),
+
+        url("../../images/ferrari/herobg.jpg");
+
+    background-size:cover;
+
+    background-position:center;
+
+    border-color:#DC0000;
+
+}
+
+.ferrari-card h3{
+
+    color:#DC0000;
+
+}
+
+.ferrari-card:hover{
+
+    transform:translateY(-10px);
+
+    box-shadow:0 0 25px rgba(220,0,0,.45);
+
+}
+
+.ferrari-card:hover h3{
+
+    color:#FFD43B;
+
+}
+
+/*----------------------------------
+McLaren
+-----------------------------------*/
+
+.mclaren-card{
+
+    background:
+
+        linear-gradient(rgba(20,20,20,.88),
+        rgba(20,20,20,.88)),
+
+        url("../../images/mclaren/hero.jpg");
+
+    background-size:cover;
+
+    background-position:center;
+
+    border-color:#FF8000;
+
+}
+
+.mclaren-card h3{
+
+    color:#FF8000;
+
+}
+
+.mclaren-card:hover{
+
+    transform:translateY(-10px);
+
+    box-shadow:0 0 25px rgba(255,128,0,.45);
+
+}
+
+.mclaren-card:hover h3{
+
+    color:#00D2FF;
+
+}
+
+/*----------------------------------
+Red Bull
+-----------------------------------*/
+
+.redbull-card{
+
+    background:
+
+        linear-gradient(rgba(10,15,35,.90),
+        rgba(10,15,35,.90)),
+
+        url("../../images/redbull/hero.jpg");
+
+    background-size:cover;
+
+    background-position:center;
+
+    border-color:#1E5BC6;
+
+}
+
+.redbull-card h3{
+
+    color:#1E5BC6;
+
+}
+
+.redbull-card:hover{
+
+    transform:translateY(-10px);
+
+    box-shadow:0 0 25px rgba(30,91,198,.45);
+
+}
+
+.redbull-card:hover h3{
+
+    color:#FFD700;
+
+}
+
+/*----------------------------------
+Hover Animation
+-----------------------------------*/
+
+.related-card::before{
+
+    content:"";
+
+    position:absolute;
+
+    top:0;
+    left:-100%;
+
+    width:100%;
+    height:100%;
+
+    background:linear-gradient(
+
+        120deg,
+
+        transparent,
+
+        rgba(255,255,255,.12),
+
+        transparent
+
+    );
+
+    transition:.7s;
+
+}
+
+.related-card:hover::before{
+
+    left:100%;
+
+}
+
+.related-card:hover p{
+
+    color:white;
+
+}
+
+/*==================================================
+    RESPONSIVE
+==================================================*/
+
+@media(max-width:950px){
+
+    .related-grid{
+
+        grid-template-columns:1fr;
+
+    }
+
+}
+
+/*==================================================
+    BACK BUTTON
+==================================================*/
+
+.back-section{
+
+    text-align:center;
+
+    padding-top:20px;
+
+    padding-bottom:100px;
+
+}
+
+.back-btn{
+
+    display:inline-block;
+
+    padding:16px 38px;
+
+    border-radius:50px;
+
+    text-decoration:none;
+
+    background:var(--mercedes);
+
+    color:#111;
+
+    font-weight:600;
+
+    transition:.35s ease;
+
+    box-shadow:
+        0 0 20px rgba(0,210,190,.25);
+
+}
+
+.back-btn:hover{
+
+    transform:translateY(-5px);
+
+    background:var(--silver-light);
+
+    box-shadow:
+        0 0 30px rgba(0,210,190,.45);
+
+}
+
+/*==================================================
+    SCROLL REVEAL
+==================================================*/
+
+.hidden{
+
+    opacity:0;
+
+    transform:translateY(60px);
+
+    transition:
+        opacity .9s ease,
+        transform .9s ease;
+
+}
+
+.show{
+
+    opacity:1;
+
+    transform:translateY(0);
+
+}
+
+/*==================================================
+    RESPONSIVE
+==================================================*/
+
+@media(max-width:950px){
+
+    .innovation-grid,
+    .gallery-grid,
+    .fact-grid,
+    .related-grid{
+
+        grid-template-columns:1fr;
+
+    }
+
+    .timeline-container{
+
+        padding-left:25px;
+
+    }
+
+    .timeline-item::before{
+
+        left:-35px;
+
+    }
+
+}
