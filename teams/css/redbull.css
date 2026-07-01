@@ -1,0 +1,1644 @@
+/*==================================================
+                RED BULL RACING THEME
+==================================================*/
+
+:root{
+
+    --rb-blue:#1B4DFF;
+    --rb-blue-dark:#071A55;
+    --rb-red:#E10600;
+    --rb-yellow:#FFD400;
+    --rb-white:#F5F5F5;
+
+    --bg:#05070C;
+    --card:#12151D;
+    --card2:#1A2030;
+
+    --text:#F4F4F4;
+    --muted:#C8C8C8;
+
+}
+
+/*==================================================
+GLOBAL
+==================================================*/
+
+*{
+
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+
+}
+
+html{
+
+    scroll-behavior:smooth;
+
+}
+
+body{
+
+    font-family:'Poppins',sans-serif;
+
+    background:
+    radial-gradient(circle at top,
+    rgba(27,77,255,.18),
+    transparent 35%),
+
+    linear-gradient(
+    #05070C,
+    #09132A 35%,
+    #05070C);
+
+    color:var(--text);
+
+    overflow-x:hidden;
+
+}
+
+section{
+
+    padding:100px 8%;
+
+}
+
+h2{
+
+    font-family:'Orbitron',sans-serif;
+
+}
+
+/*==================================================
+NAVBAR
+==================================================*/
+
+nav{
+
+    position:fixed;
+
+    top:0;
+    left:0;
+
+    width:100%;
+
+    z-index:999;
+
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+
+    padding:22px 8%;
+
+    background:rgba(5,8,15,.88);
+
+    backdrop-filter:blur(16px);
+
+    border-bottom:1px solid rgba(27,77,255,.2);
+
+}
+
+.logo{
+
+    color:var(--rb-red);
+
+    font-size:2rem;
+
+    font-family:'Orbitron',sans-serif;
+
+    font-weight:700;
+
+}
+
+nav ul{
+
+    display:flex;
+
+    list-style:none;
+
+    gap:35px;
+
+}
+
+nav a{
+
+    text-decoration:none;
+
+    color:white;
+
+    position:relative;
+
+    transition:.35s;
+
+}
+
+nav a::after{
+
+    content:"";
+
+    position:absolute;
+
+    left:0;
+    bottom:-6px;
+
+    width:0;
+
+    height:2px;
+
+    background:var(--rb-red);
+
+    transition:.35s;
+
+}
+
+nav a:hover{
+
+    color:var(--rb-yellow);
+
+}
+
+nav a:hover::after{
+
+    width:100%;
+
+}
+
+/*==================================================
+HERO
+==================================================*/
+
+.hero{
+
+    position:relative;
+
+    height:100vh;
+
+    display:flex;
+
+    justify-content:center;
+
+    align-items:center;
+
+    text-align:center;
+
+    overflow:hidden;
+
+    background:
+
+        linear-gradient(
+        rgba(0,0,0,.45),
+        rgba(0,0,0,.75)),
+
+        url("../../images/redbull/hero.jpg");
+
+    background-size:cover;
+
+    background-position:center;
+
+    background-attachment:fixed;
+
+}
+
+/* Blue glow */
+
+.hero::before{
+
+    content:"";
+
+    position:absolute;
+
+    inset:0;
+
+    background:
+
+    radial-gradient(circle,
+    rgba(27,77,255,.22),
+    transparent 70%);
+
+}
+
+/* Moving light streaks */
+
+.hero::after{
+
+    content:"";
+
+    position:absolute;
+
+    width:220%;
+
+    height:220%;
+
+    top:-60%;
+
+    left:-60%;
+
+    background:
+    repeating-linear-gradient(
+
+        -65deg,
+
+        transparent 0px,
+
+        transparent 160px,
+
+        rgba(255,255,255,.04) 170px,
+
+        rgba(255,255,255,.08) 180px,
+
+        transparent 190px
+
+    );
+
+    animation:streaks 18s linear infinite;
+
+}
+
+@keyframes streaks{
+
+    from{
+
+        transform:translateX(-5%) translateY(0);
+
+    }
+
+    to{
+
+        transform:translateX(10%) translateY(8%);
+
+    }
+
+}
+
+.hero-content{
+
+    position:relative;
+
+    z-index:5;
+
+    max-width:900px;
+
+    padding:0 20px;
+
+}
+
+.hero h1{
+
+    font-size:5.3rem;
+
+    font-family:'Orbitron',sans-serif;
+
+    color:white;
+
+    text-shadow:
+
+        0 0 12px rgba(27,77,255,.45),
+
+        0 0 35px rgba(225,6,0,.25);
+
+}
+
+.team-small{
+
+    margin:18px 0;
+
+    color:var(--rb-yellow);
+
+    letter-spacing:5px;
+
+    text-transform:uppercase;
+
+    font-weight:600;
+
+}
+
+.hero h3{
+
+    margin-top:18px;
+
+    font-size:2rem;
+
+    font-weight:300;
+
+}
+
+.hero-tags{
+
+    display:flex;
+
+    justify-content:center;
+
+    flex-wrap:wrap;
+
+    gap:18px;
+
+    margin-top:35px;
+
+}
+
+.hero-tags span{
+
+    padding:12px 24px;
+
+    border-radius:50px;
+
+    background:rgba(27,77,255,.12);
+
+    border:1px solid rgba(27,77,255,.35);
+
+    backdrop-filter:blur(12px);
+
+    transition:.35s;
+
+}
+
+.hero-tags span:hover{
+
+    transform:translateY(-5px);
+
+    border-color:var(--rb-yellow);
+
+    box-shadow:
+
+    0 0 20px rgba(27,77,255,.35);
+
+}
+
+/*==================================================
+OVERVIEW
+==================================================*/
+
+.overview{
+
+    display:grid;
+
+    grid-template-columns:340px 1fr;
+
+    gap:45px;
+
+    align-items:center;
+
+}
+
+.logo-card{
+
+    display:flex;
+
+    justify-content:center;
+
+    align-items:center;
+
+    padding:30px;
+
+    border-radius:28px;
+
+    background:
+
+    linear-gradient(
+    145deg,
+    var(--card),
+    var(--card2));
+
+    border:1px solid rgba(27,77,255,.15);
+
+    box-shadow:
+
+    0 0 25px rgba(27,77,255,.18);
+
+}
+
+.logo-card img{
+
+    width:280px;
+
+}
+
+.info-card{
+
+    background:
+
+    linear-gradient(
+    145deg,
+    var(--card),
+    var(--card2));
+
+    padding:40px;
+
+    border-radius:25px;
+
+    border:1px solid rgba(27,77,255,.15);
+
+}
+
+.info-card h2{
+
+    color:var(--rb-red);
+
+    margin-bottom:35px;
+
+}
+
+.info-grid{
+
+    display:grid;
+
+    grid-template-columns:repeat(2,1fr);
+
+    gap:25px;
+
+}
+
+.info-grid div{
+
+    background:#171C28;
+
+    padding:18px;
+
+    border-radius:15px;
+
+    transition:.35s;
+
+}
+
+.info-grid div:hover{
+
+    transform:translateY(-5px);
+
+    border:1px solid rgba(255,212,0,.35);
+
+    box-shadow:
+
+    0 0 20px rgba(27,77,255,.18);
+
+}
+
+.info-grid h4{
+
+    color:var(--rb-yellow);
+
+    margin-bottom:8px;
+
+}
+
+.info-grid p{
+
+    color:var(--muted);
+
+}
+
+/*==================================================
+ABOUT
+==================================================*/
+
+.about-team{
+
+    max-width:1050px;
+
+    margin:auto;
+
+    text-align:center;
+
+}
+
+.about-team h2{
+
+    color:var(--rb-red);
+
+    margin-bottom:35px;
+
+    font-size:2.5rem;
+
+}
+
+.about-team p{
+
+    line-height:2;
+
+    color:#DADADA;
+
+    font-size:1.08rem;
+
+}
+
+/*==================================================
+DRIVERS
+==================================================*/
+
+.drivers h2{
+
+    text-align:center;
+
+    color:var(--rb-red);
+
+    margin-bottom:50px;
+
+    font-size:2.5rem;
+
+}
+
+.driver-grid{
+
+    display:grid;
+
+    grid-template-columns:repeat(2,1fr);
+
+    gap:40px;
+
+}
+
+.driver-card{
+
+    position:relative;
+
+    overflow:hidden;
+
+    text-decoration:none;
+
+    color:white;
+
+    background:
+
+    linear-gradient(
+    145deg,
+    var(--card),
+    var(--card2));
+
+    border-radius:24px;
+
+    border:1px solid rgba(27,77,255,.15);
+
+    transition:.45s;
+
+}
+
+.driver-card:hover{
+
+    transform:translateY(-12px);
+
+    box-shadow:
+
+    0 0 35px rgba(27,77,255,.35);
+
+}
+
+.driver-image{
+
+    height:390px;
+
+    overflow:hidden;
+
+}
+
+.driver-image img{
+
+    width:100%;
+
+    height:100%;
+
+    object-fit:cover;
+
+    transition:.6s;
+
+}
+
+.driver-card:hover img{
+
+    transform:scale(1.08);
+
+}
+
+.driver-content{
+
+    padding:28px;
+
+}
+
+.driver-content h3{
+
+    color:var(--rb-red);
+
+    font-size:1.8rem;
+
+}
+
+.driver-content p{
+
+    color:var(--muted);
+
+    margin:12px 0;
+
+}
+
+.driver-content span{
+
+    color:var(--rb-yellow);
+
+    font-weight:600;
+
+}
+
+.driver-card:hover span{
+
+    letter-spacing:1px;
+
+}
+
+/*==================================================
+SCROLLBAR
+==================================================*/
+
+::-webkit-scrollbar{
+
+    width:10px;
+
+}
+
+::-webkit-scrollbar-track{
+
+    background:#111;
+
+}
+
+::-webkit-scrollbar-thumb{
+
+    background:var(--rb-blue);
+
+    border-radius:20px;
+
+}
+
+::-webkit-scrollbar-thumb:hover{
+
+    background:var(--rb-red);
+
+}
+
+/*==================================================
+RESPONSIVE
+==================================================*/
+
+@media(max-width:950px){
+
+    .overview{
+
+        grid-template-columns:1fr;
+
+    }
+
+    .driver-grid{
+
+        grid-template-columns:1fr;
+
+    }
+
+    .info-grid{
+
+        grid-template-columns:1fr;
+
+    }
+
+}
+
+@media(max-width:700px){
+
+    .hero h1{
+
+        font-size:3.2rem;
+
+    }
+
+    .hero h3{
+
+        font-size:1.4rem;
+
+    }
+
+}
+
+/*==================================================
+                RB22 SECTION
+==================================================*/
+
+.car-section{
+
+    display:grid;
+
+    grid-template-columns:1fr 1fr;
+
+    gap:70px;
+
+    align-items:center;
+
+}
+
+.car-text h2{
+
+    color:var(--rb-red);
+
+    font-size:2.6rem;
+
+    margin-bottom:25px;
+
+}
+
+.car-text p{
+
+    line-height:2;
+
+    color:#d7d7d7;
+
+}
+
+.car-image{
+
+    display:flex;
+
+    justify-content:center;
+
+}
+
+.car-image img{
+
+    width:100%;
+
+    max-width:700px;
+
+    transition:.5s ease;
+
+    filter:drop-shadow(0 0 35px rgba(30,91,198,.35));
+
+}
+
+.car-image img:hover{
+
+    transform:scale(1.04);
+
+    filter:
+        drop-shadow(0 0 45px rgba(30,91,198,.55))
+        drop-shadow(0 0 25px rgba(225,6,0,.25));
+
+}
+
+/*==================================================
+                TEAM RECORDS
+==================================================*/
+
+.records h2{
+
+    text-align:center;
+
+    color:var(--rb-red);
+
+    margin-bottom:55px;
+
+}
+
+.record-grid{
+
+    display:grid;
+
+    grid-template-columns:repeat(auto-fit,minmax(220px,1fr));
+
+    gap:30px;
+
+}
+
+.record-card{
+
+    position:relative;
+
+    overflow:hidden;
+
+    padding:35px;
+
+    text-align:center;
+
+    border-radius:22px;
+
+    background:linear-gradient(
+        145deg,
+        rgba(15,20,55,.95),
+        rgba(10,15,35,.95)
+    );
+
+    border:1px solid rgba(30,91,198,.25);
+
+    transition:.4s ease;
+
+}
+
+.record-card::before{
+
+    content:"";
+
+    position:absolute;
+
+    inset:0;
+
+    background:linear-gradient(
+        135deg,
+        rgba(30,91,198,.18),
+        rgba(225,6,0,.08),
+        transparent
+    );
+
+    opacity:0;
+
+    transition:.4s;
+
+}
+
+.record-card:hover{
+
+    transform:translateY(-10px);
+
+    border-color:var(--rb-blue);
+
+    box-shadow:
+        0 0 25px rgba(30,91,198,.35);
+
+}
+
+.record-card:hover::before{
+
+    opacity:1;
+
+}
+
+.record-card span{
+
+    position:relative;
+
+    z-index:2;
+
+    display:block;
+
+    font-size:2.9rem;
+
+    color:var(--rb-yellow);
+
+    font-family:'Orbitron',sans-serif;
+
+    margin-bottom:15px;
+
+    text-shadow:
+        0 0 12px rgba(255,215,0,.35);
+
+}
+
+.record-card p{
+
+    position:relative;
+
+    z-index:2;
+
+    color:#d8d8d8;
+
+    line-height:1.7;
+
+}
+
+/*==================================================
+            RED BULL FORMULA
+==================================================*/
+
+.formula h2{
+
+    text-align:center;
+
+    color:var(--rb-red);
+
+    margin-bottom:20px;
+
+}
+
+.formula-intro{
+
+    max-width:900px;
+
+    margin:0 auto 60px;
+
+    text-align:center;
+
+    line-height:2;
+
+    color:#d5d5d5;
+
+}
+
+.formula-grid{
+
+    display:grid;
+
+    grid-template-columns:repeat(auto-fit,minmax(300px,1fr));
+
+    gap:30px;
+
+}
+
+.formula-card{
+
+    position:relative;
+
+    overflow:hidden;
+
+    padding:35px;
+
+    border-radius:24px;
+
+    background:
+
+        linear-gradient(
+            145deg,
+            rgba(15,20,55,.92),
+            rgba(10,15,35,.92)
+        );
+
+    border:1px solid rgba(30,91,198,.18);
+
+    transition:.4s ease;
+
+}
+
+.formula-card::before{
+
+    content:"";
+
+    position:absolute;
+
+    top:0;
+    left:-100%;
+
+    width:100%;
+    height:100%;
+
+    background:linear-gradient(
+
+        120deg,
+
+        transparent,
+
+        rgba(255,255,255,.08),
+
+        transparent
+
+    );
+
+    transition:.8s;
+
+}
+
+.formula-card:hover::before{
+
+    left:100%;
+
+}
+
+.formula-card:hover{
+
+    transform:translateY(-10px);
+
+    border-color:var(--rb-red);
+
+    box-shadow:
+        0 0 30px rgba(30,91,198,.35);
+
+}
+
+.formula-card h3{
+
+    color:var(--rb-yellow);
+
+    margin-bottom:18px;
+
+    font-family:'Orbitron',sans-serif;
+
+}
+
+.formula-card p{
+
+    color:#d7d7d7;
+
+    line-height:1.9;
+
+}
+
+/*==================================================
+                TIMELINE
+==================================================*/
+
+.timeline h2{
+
+    text-align:center;
+
+    color:var(--rb-red);
+
+    margin-bottom:60px;
+
+}
+
+.timeline-container{
+
+    max-width:900px;
+
+    margin:auto;
+
+    padding-left:40px;
+
+    border-left:4px solid var(--rb-blue);
+
+}
+
+.timeline-item{
+
+    position:relative;
+
+    margin-bottom:60px;
+
+}
+
+.timeline-item::before{
+
+    content:"";
+
+    position:absolute;
+
+    width:20px;
+
+    height:20px;
+
+    border-radius:50%;
+
+    left:-52px;
+
+    top:8px;
+
+    background:var(--rb-yellow);
+
+    box-shadow:
+        0 0 15px rgba(255,215,0,.6);
+
+}
+
+.timeline-item h3{
+
+    color:var(--rb-yellow);
+
+    margin-bottom:12px;
+
+    font-family:'Orbitron',sans-serif;
+
+}
+
+.timeline-item p{
+
+    color:#d6d6d6;
+
+    line-height:1.9;
+
+}
+
+/*==================================================
+                RESPONSIVE
+==================================================*/
+
+@media(max-width:950px){
+
+    .car-section{
+
+        grid-template-columns:1fr;
+
+    }
+
+    .timeline-container{
+
+        padding-left:25px;
+
+    }
+
+    .timeline-item::before{
+
+        left:-36px;
+
+    }
+
+}
+
+
+/*==================================================
+                    GALLERY
+==================================================*/
+
+.gallery h2{
+
+    text-align:center;
+
+    color:var(--rb-red);
+
+    margin-bottom:50px;
+
+}
+
+.gallery-grid{
+
+    display:grid;
+
+    grid-template-columns:repeat(2,1fr);
+
+    gap:25px;
+
+}
+
+.gallery-item{
+
+    overflow:hidden;
+
+    border-radius:22px;
+
+    border:1px solid rgba(30,91,198,.18);
+
+    background:#111827;
+
+    transition:.4s ease;
+
+}
+
+.gallery-item:hover{
+
+    transform:translateY(-8px);
+
+    box-shadow:
+        0 0 25px rgba(30,91,198,.35);
+
+}
+
+.gallery-item img{
+
+    display:block;
+
+    width:100%;
+
+    height:400px;
+
+    object-fit:cover;
+
+    transition:.55s ease;
+
+}
+
+.gallery-item:hover img{
+
+    transform:scale(1.08);
+
+}
+
+/*==================================================
+                    FACTS
+==================================================*/
+
+.facts h2{
+
+    text-align:center;
+
+    color:var(--rb-red);
+
+    margin-bottom:50px;
+
+}
+
+.fact-grid{
+
+    display:grid;
+
+    grid-template-columns:repeat(3,1fr);
+
+    gap:30px;
+
+}
+
+.fact-card{
+
+    position:relative;
+
+    overflow:hidden;
+
+    padding:35px;
+
+    border-radius:24px;
+
+    background:linear-gradient(
+        145deg,
+        rgba(15,20,55,.96),
+        rgba(10,15,35,.96)
+    );
+
+    border:1px solid rgba(30,91,198,.20);
+
+    transition:.4s ease;
+
+}
+
+.fact-card::before{
+
+    content:"";
+
+    position:absolute;
+
+    top:0;
+    left:0;
+
+    width:100%;
+    height:4px;
+
+    background:linear-gradient(
+        90deg,
+        var(--rb-blue),
+        var(--rb-red),
+        var(--rb-yellow)
+    );
+
+}
+
+.fact-card:hover{
+
+    transform:translateY(-10px);
+
+    border-color:var(--rb-blue);
+
+    box-shadow:
+        0 0 28px rgba(30,91,198,.35);
+
+}
+
+.fact-card h3{
+
+    color:var(--rb-yellow);
+
+    margin-bottom:20px;
+
+    font-size:1.4rem;
+
+    font-family:'Orbitron',sans-serif;
+
+}
+
+.fact-card p{
+
+    color:#d6d6d6;
+
+    line-height:1.9;
+
+}
+
+/*==================================================
+                RELATED TEAMS
+==================================================*/
+
+.related h2{
+
+    text-align:center;
+
+    color:var(--rb-red);
+
+    margin-bottom:45px;
+
+}
+
+.related-grid{
+
+    display:grid;
+
+    grid-template-columns:repeat(3,1fr);
+
+    gap:30px;
+
+}
+
+/* Base Card */
+
+.related-card{
+
+    position:relative;
+
+    overflow:hidden;
+
+    padding:35px;
+
+    border-radius:24px;
+
+    text-decoration:none;
+
+    color:white;
+
+    transition:.4s ease;
+
+    border:2px solid transparent;
+
+    background:#181818;
+
+}
+
+.related-card h3{
+
+    font-size:1.7rem;
+
+    margin-bottom:12px;
+
+    transition:.35s;
+
+}
+
+.related-card p{
+
+    color:#d8d8d8;
+
+    transition:.35s;
+
+}
+
+/*==============================
+        Ferrari
+==============================*/
+
+.ferrari-card{
+
+    background:
+
+        linear-gradient(rgba(20,20,20,.88),
+        rgba(20,20,20,.88)),
+
+        url("../../images/ferrari/herobg.jpg");
+
+    background-size:cover;
+
+    background-position:center;
+
+    border-color:#DC0000;
+
+}
+
+.ferrari-card h3{
+
+    color:#DC0000;
+
+}
+
+.ferrari-card:hover{
+
+    transform:translateY(-10px);
+
+    box-shadow:0 0 25px rgba(220,0,0,.45);
+
+}
+
+.ferrari-card:hover h3{
+
+    color:#FFD43B;
+
+}
+
+/*==============================
+        Mercedes
+==============================*/
+
+.mercedes-card{
+
+    background:
+
+        linear-gradient(rgba(18,18,18,.88),
+        rgba(18,18,18,.88)),
+
+        url("../../images/mercedes/hero.jpg");
+
+    background-size:cover;
+
+    background-position:center;
+
+    border-color:#00D2BE;
+
+}
+
+.mercedes-card h3{
+
+    color:#00D2BE;
+
+}
+
+.mercedes-card:hover{
+
+    transform:translateY(-10px);
+
+    box-shadow:0 0 25px rgba(0,210,190,.45);
+
+}
+
+.mercedes-card:hover h3{
+
+    color:white;
+
+}
+
+/*==============================
+        McLaren
+==============================*/
+
+.mclaren-card{
+
+    background:
+
+        linear-gradient(rgba(18,18,18,.88),
+        rgba(18,18,18,.88)),
+
+        url("../../images/mclaren/hero.jpg");
+
+    background-size:cover;
+
+    background-position:center;
+
+    border-color:#FF8000;
+
+}
+
+.mclaren-card h3{
+
+    color:#FF8000;
+
+}
+
+.mclaren-card:hover{
+
+    transform:translateY(-10px);
+
+    box-shadow:0 0 25px rgba(255,128,0,.45);
+
+}
+
+.mclaren-card:hover h3{
+
+    color:#00D2FF;
+
+}
+
+/*----------------------------------
+Shine Animation
+-----------------------------------*/
+
+.related-card::before{
+
+    content:"";
+
+    position:absolute;
+
+    top:0;
+    left:-100%;
+
+    width:100%;
+    height:100%;
+
+    background:linear-gradient(
+
+        120deg,
+
+        transparent,
+
+        rgba(255,255,255,.14),
+
+        transparent
+
+    );
+
+    transition:.8s;
+
+}
+
+.related-card:hover::before{
+
+    left:100%;
+
+}
+
+.related-card:hover p{
+
+    color:white;
+
+}
+
+/*==================================================
+                BACK BUTTON
+==================================================*/
+
+.back-section{
+
+    text-align:center;
+
+    padding-top:20px;
+
+    padding-bottom:100px;
+
+}
+
+.back-btn{
+
+    display:inline-block;
+
+    padding:16px 38px;
+
+    border-radius:50px;
+
+    text-decoration:none;
+
+    background:linear-gradient(
+        90deg,
+        var(--rb-red),
+        #ff3a3a
+    );
+
+    color:white;
+
+    font-weight:600;
+
+    transition:.35s ease;
+
+    box-shadow:
+        0 0 20px rgba(225,6,0,.25);
+
+}
+
+.back-btn:hover{
+
+    transform:translateY(-5px);
+
+    background:linear-gradient(
+        90deg,
+        var(--rb-blue),
+        #3b82f6
+    );
+
+    box-shadow:
+        0 0 30px rgba(30,91,198,.45);
+
+}
+
+/*==================================================
+                SCROLL REVEAL
+==================================================*/
+
+.hidden{
+
+    opacity:0;
+
+    transform:translateY(60px);
+
+    transition:
+        opacity .9s ease,
+        transform .9s ease;
+
+}
+
+.show{
+
+    opacity:1;
+
+    transform:translateY(0);
+
+}
+
+/*==================================================
+                RESPONSIVE
+==================================================*/
+
+@media(max-width:950px){
+
+    .gallery-grid{
+
+        grid-template-columns:1fr;
+
+    }
+
+    .fact-grid{
+
+        grid-template-columns:1fr;
+
+    }
+
+    .related-grid{
+
+        grid-template-columns:1fr;
+
+    }
+
+}
+
+@media(max-width:700px){
+
+    .back-btn{
+
+        width:100%;
+
+        max-width:320px;
+
+        text-align:center;
+
+    }
+
+}
