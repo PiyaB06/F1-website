@@ -1,0 +1,1720 @@
+/*==================================================
+            ASTON MARTIN THEME
+==================================================*/
+
+:root {
+
+     --aston-green: #006F62;
+     --aston-green-light: #00A98F;
+     --aston-lime: #A5FF4F;
+     --aston-silver: #D9D9D9;
+
+     --bg: #090909;
+     --card: rgba(18, 18, 18, .75);
+     --card2: rgba(28, 28, 28, .75);
+
+     --text: #F4F4F4;
+     --muted: #BDBDBD;
+
+}
+
+/*==================================================
+GLOBAL
+==================================================*/
+
+* {
+
+     margin: 0;
+     padding: 0;
+     box-sizing: border-box;
+
+}
+
+html {
+
+     scroll-behavior: smooth;
+
+}
+
+body {
+
+     font-family: 'Poppins', sans-serif;
+
+     color: var(--text);
+
+     overflow-x: hidden;
+
+     background:
+          radial-gradient(circle at top,
+               rgba(0, 169, 143, .18),
+               transparent 30%),
+
+          radial-gradient(circle at bottom right,
+               rgba(0, 111, 98, .12),
+               transparent 35%),
+
+          #090909;
+
+}
+
+section {
+
+     padding: 100px 8%;
+
+}
+
+h2 {
+
+     font-family: 'Orbitron', sans-serif;
+
+}
+/*==================================================
+            PREMIUM SECTION DIVIDER
+==================================================*/
+
+section{
+
+    position:relative;
+
+    padding:100px 8%;
+
+}
+
+/* Don't add divider after hero */
+
+.hero::after{
+
+    display:none;
+
+}
+
+/* Emerald divider */
+
+section:not(.hero)::before{
+
+    content:"";
+
+    position:absolute;
+
+    top:0;
+
+    left:50%;
+
+    transform:translateX(-50%);
+
+    width:70%;
+
+    height:2px;
+
+    background:linear-gradient(
+        90deg,
+
+        transparent,
+
+        rgba(0,169,143,.15),
+
+        rgba(165,255,79,.55),
+
+        rgba(0,169,143,.15),
+
+        transparent
+
+    );
+
+    box-shadow:
+        0 0 15px rgba(0,169,143,.18),
+        0 0 30px rgba(165,255,79,.08);
+
+}
+
+/*==================================================
+NAVBAR
+==================================================*/
+
+nav {
+
+     position: fixed;
+
+     top: 0;
+     left: 0;
+
+     width: 100%;
+
+     display: flex;
+
+     justify-content: space-between;
+
+     align-items: center;
+
+     padding: 22px 8%;
+
+     z-index: 999;
+
+     background: rgba(10, 10, 10, .72);
+
+     backdrop-filter: blur(18px);
+
+     border-bottom: 1px solid rgba(0, 169, 143, .18);
+
+}
+
+.logo {
+
+     font-family: 'Orbitron', sans-serif;
+
+     font-size: 2rem;
+
+     color: var(--aston-green-light);
+
+     font-weight: bold;
+
+     letter-spacing: 2px;
+
+}
+
+nav ul {
+
+     display: flex;
+
+     gap: 35px;
+
+     list-style: none;
+
+}
+
+nav a {
+
+     text-decoration: none;
+
+     color: white;
+
+     position: relative;
+
+     transition: .35s;
+
+}
+
+nav a::after {
+
+     content: "";
+
+     position: absolute;
+
+     left: 0;
+     bottom: -6px;
+
+     width: 0;
+
+     height: 2px;
+
+     background: var(--aston-green-light);
+
+     transition: .35s;
+
+}
+
+nav a:hover {
+
+     color: var(--aston-green-light);
+
+}
+
+nav a:hover::after {
+
+     width: 100%;
+
+}
+
+/*==================================================
+HERO
+==================================================*/
+
+.hero {
+
+     height: 100vh;
+
+     display: flex;
+
+     justify-content: center;
+
+     align-items: center;
+
+     text-align: center;
+
+     position: relative;
+
+     overflow: hidden;
+
+     background:
+
+          linear-gradient(rgba(0, 0, 0, .55),
+               rgba(0, 0, 0, .82)),
+
+          url("../../images/astonmartin/hero.jpg");
+
+     background-size: cover;
+
+     background-position: center;
+
+     background-attachment: fixed;
+
+}
+
+/* Emerald Aurora */
+
+.aurora {
+
+     position: absolute;
+
+     inset: 0;
+
+     background:
+
+          radial-gradient(circle at 25% 20%,
+               rgba(0, 169, 143, .35),
+               transparent 35%),
+
+          radial-gradient(circle at 75% 40%,
+               rgba(165, 255, 79, .18),
+               transparent 30%),
+
+          radial-gradient(circle at center,
+               rgba(0, 111, 98, .25),
+               transparent 45%);
+
+     filter: blur(40px);
+
+     animation: auroraMove 12s ease-in-out infinite alternate;
+
+}
+
+@keyframes auroraMove {
+
+     from {
+
+          transform: translateX(-20px) translateY(0);
+
+     }
+
+     to {
+
+          transform: translateX(20px) translateY(-25px);
+
+     }
+
+}
+
+.hero-content {
+
+     position: relative;
+
+     z-index: 5;
+
+     max-width: 900px;
+
+}
+
+.hero h1 {
+
+     font-family: 'Orbitron', sans-serif;
+
+     font-size: 5rem;
+
+     color: var(--aston-green-light);
+
+     text-shadow:
+
+          0 0 18px rgba(0, 169, 143, .45),
+
+          0 0 50px rgba(0, 169, 143, .22);
+
+}
+
+.team-small {
+
+     margin: 20px 0;
+
+     color: var(--aston-lime);
+
+     letter-spacing: 5px;
+
+     text-transform: uppercase;
+
+}
+
+.hero h3 {
+
+     margin-top: 20px;
+
+     font-size: 2rem;
+
+     font-weight: 300;
+
+}
+
+.hero-tags {
+
+     display: flex;
+
+     justify-content: center;
+
+     flex-wrap: wrap;
+
+     gap: 18px;
+
+     margin-top: 35px;
+
+}
+
+.hero-tags span {
+
+     padding: 12px 24px;
+
+     border-radius: 50px;
+
+     background: rgba(255, 255, 255, .08);
+
+     backdrop-filter: blur(14px);
+
+     border: 1px solid rgba(0, 169, 143, .25);
+
+     transition: .35s;
+
+}
+
+.hero-tags span:hover {
+
+     transform: translateY(-5px);
+
+     background: rgba(0, 169, 143, .16);
+
+     border-color: var(--aston-green-light);
+
+     box-shadow:
+
+          0 0 18px rgba(0, 169, 143, .25);
+
+}
+
+/*==================================================
+OVERVIEW
+==================================================*/
+
+.overview {
+
+     display: grid;
+
+     grid-template-columns: 340px 1fr;
+
+     gap: 45px;
+
+     align-items: center;
+
+}
+
+.logo-card {
+
+     display: flex;
+
+     justify-content: center;
+
+     align-items: center;
+
+     padding: 30px;
+
+     border-radius: 28px;
+
+     background: rgba(255, 255, 255, .05);
+
+     backdrop-filter: blur(18px);
+
+     border: 1px solid rgba(255, 255, 255, .08);
+
+     box-shadow:
+
+          0 0 35px rgba(0, 169, 143, .12);
+
+}
+
+.logo-card img {
+
+     width: 280px;
+
+}
+
+.info-card {
+
+     padding: 40px;
+
+     border-radius: 28px;
+
+     background: rgba(255, 255, 255, .05);
+
+     backdrop-filter: blur(18px);
+
+     border: 1px solid rgba(255, 255, 255, .08);
+
+}
+
+.info-card h2 {
+
+     color: var(--aston-green-light);
+
+     margin-bottom: 35px;
+
+}
+
+.info-grid {
+
+     display: grid;
+
+     grid-template-columns: repeat(2, 1fr);
+
+     gap: 22px;
+
+}
+
+.info-grid div {
+
+     padding: 18px;
+
+     border-radius: 16px;
+
+     background: rgba(255, 255, 255, .04);
+
+     transition: .35s;
+
+}
+
+.info-grid div:hover {
+
+     transform: translateY(-6px);
+
+     border: 1px solid rgba(0, 169, 143, .28);
+
+     box-shadow:
+
+          0 0 18px rgba(0, 169, 143, .15);
+
+}
+
+.info-grid h4 {
+
+     color: var(--aston-lime);
+
+     margin-bottom: 8px;
+
+}
+
+.info-grid p {
+
+     color: var(--muted);
+
+}
+
+/*==================================================
+ABOUT
+==================================================*/
+
+.about-team {
+
+     max-width: 1000px;
+
+     margin: auto;
+
+     text-align: center;
+
+}
+
+.about-team h2 {
+
+     color: var(--aston-green-light);
+
+     font-size: 2.5rem;
+
+     margin-bottom: 35px;
+
+}
+
+.about-team p {
+
+     line-height: 2;
+
+     color: #d6d6d6;
+
+     font-size: 1.08rem;
+
+}
+
+/*==================================================
+DRIVERS
+==================================================*/
+
+.drivers h2 {
+
+     text-align: center;
+
+     color: var(--aston-green-light);
+
+     margin-bottom: 50px;
+
+     font-size: 2.5rem;
+
+}
+
+.driver-grid {
+
+     display: grid;
+
+     grid-template-columns: repeat(2, 1fr);
+
+     gap: 40px;
+
+}
+
+.driver-card {
+
+     text-decoration: none;
+
+     color: white;
+
+     overflow: hidden;
+
+     border-radius: 24px;
+
+     background: rgba(255, 255, 255, .05);
+
+     backdrop-filter: blur(18px);
+
+     border: 1px solid rgba(255, 255, 255, .08);
+
+     transition: .45s;
+
+}
+
+.driver-card:hover {
+
+     transform: translateY(-10px);
+
+     box-shadow:
+
+          0 0 28px rgba(0, 169, 143, .30);
+
+}
+
+.driver-image {
+
+     height: 390px;
+
+     overflow: hidden;
+
+}
+
+.driver-image img {
+
+     display: block;
+
+     width: 100%;
+
+     height: 100%;
+
+     object-fit: cover;
+
+     transition: .5s;
+
+}
+
+.driver-card:hover img {
+
+     transform: scale(1.08);
+
+}
+
+.driver-content {
+
+     padding: 28px;
+
+}
+
+.driver-content h3 {
+
+     color: var(--aston-green-light);
+
+     font-size: 1.8rem;
+
+}
+
+.driver-content p {
+
+     color: var(--muted);
+
+     margin: 12px 0;
+
+}
+
+.driver-content span {
+
+     color: var(--aston-lime);
+
+     font-weight: 600;
+
+}
+
+.driver-card:hover span {
+
+     letter-spacing: 1px;
+
+}
+
+/*==================================================
+SCROLLBAR
+==================================================*/
+
+::-webkit-scrollbar {
+
+     width: 10px;
+
+}
+
+::-webkit-scrollbar-track {
+
+     background: #111;
+
+}
+
+::-webkit-scrollbar-thumb {
+
+     background: var(--aston-green);
+
+     border-radius: 20px;
+
+}
+
+::-webkit-scrollbar-thumb:hover {
+
+     background: var(--aston-green-light);
+
+}
+
+/*==================================================
+RESPONSIVE
+==================================================*/
+
+@media(max-width:950px) {
+
+     .overview {
+
+          grid-template-columns: 1fr;
+
+     }
+
+     .driver-grid {
+
+          grid-template-columns: 1fr;
+
+     }
+
+     .info-grid {
+
+          grid-template-columns: 1fr;
+
+     }
+
+     .hero h1 {
+
+          font-size: 3.4rem;
+
+     }
+
+     .hero h3 {
+
+          font-size: 1.4rem;
+
+     }
+
+}
+
+/*==================================================
+                AMR26
+==================================================*/
+
+.car-section{
+
+    display:grid;
+
+    grid-template-columns:1fr 1fr;
+
+    gap:70px;
+
+    align-items:center;
+
+}
+
+.car-text h2{
+
+    color:var(--aston-green-light);
+
+    font-size:2.6rem;
+
+    margin-bottom:25px;
+
+}
+
+.car-text p{
+
+    line-height:2;
+
+    color:#d6d6d6;
+
+}
+
+.car-image{
+
+    display:flex;
+
+    justify-content:center;
+
+}
+
+.car-image img{
+
+    width:100%;
+
+    max-width:700px;
+
+    transition:.5s ease;
+
+    filter:
+        drop-shadow(0 0 25px rgba(0,169,143,.25));
+
+}
+
+.car-image img:hover{
+
+    transform:scale(1.04);
+
+    filter:
+        drop-shadow(0 0 40px rgba(0,169,143,.45))
+        drop-shadow(0 0 15px rgba(165,255,79,.18));
+
+}
+
+/*==================================================
+                TEAM RECORDS
+==================================================*/
+
+.records h2{
+
+    text-align:center;
+
+    color:var(--aston-green-light);
+
+    margin-bottom:55px;
+
+}
+
+.record-grid{
+
+    display:grid;
+
+    grid-template-columns:repeat(auto-fit,minmax(220px,1fr));
+
+    gap:30px;
+
+}
+
+.record-card{
+
+    position:relative;
+
+    overflow:hidden;
+
+    padding:35px;
+
+    text-align:center;
+
+    border-radius:24px;
+
+    background:rgba(255,255,255,.04);
+
+    backdrop-filter:blur(18px);
+
+    border:1px solid rgba(255,255,255,.08);
+
+    transition:.4s ease;
+
+}
+
+/* Lime accent */
+
+.record-card::before{
+
+    content:"";
+
+    position:absolute;
+
+    top:0;
+
+    left:0;
+
+    width:100%;
+
+    height:4px;
+
+    background:linear-gradient(
+
+        90deg,
+
+        var(--aston-green),
+
+        var(--aston-lime)
+
+    );
+
+}
+
+/* Glass shine */
+
+.record-card::after{
+
+    content:"";
+
+    position:absolute;
+
+    top:0;
+
+    left:-120%;
+
+    width:60%;
+
+    height:100%;
+
+    background:linear-gradient(
+
+        120deg,
+
+        transparent,
+
+        rgba(255,255,255,.18),
+
+        transparent
+
+    );
+
+    transition:.8s;
+
+}
+
+.record-card:hover::after{
+
+    left:150%;
+
+}
+
+.record-card:hover{
+
+    transform:translateY(-10px);
+
+    border-color:rgba(0,169,143,.35);
+
+    box-shadow:
+
+        0 0 30px rgba(0,169,143,.18);
+
+}
+
+.record-card span{
+
+    display:block;
+
+    font-size:2.8rem;
+
+    color:var(--aston-green-light);
+
+    font-family:'Orbitron',sans-serif;
+
+    margin-bottom:15px;
+
+    text-shadow:
+
+        0 0 10px rgba(0,169,143,.3);
+
+}
+
+.record-card p{
+
+    color:#d8d8d8;
+
+    line-height:1.7;
+
+}
+
+/*==================================================
+                ASTON MARTIN VISION
+==================================================*/
+
+.vision h2{
+
+    text-align:center;
+
+    color:var(--aston-green-light);
+
+    margin-bottom:20px;
+
+}
+
+.vision-intro{
+
+    max-width:900px;
+
+    margin:0 auto 60px;
+
+    text-align:center;
+
+    line-height:2;
+
+    color:#d6d6d6;
+
+}
+
+.vision-grid{
+
+    display:grid;
+
+    grid-template-columns:repeat(auto-fit,minmax(300px,1fr));
+
+    gap:30px;
+
+}
+
+.vision-card{
+
+    position:relative;
+
+    overflow:hidden;
+
+    padding:35px;
+
+    border-radius:24px;
+
+    background:rgba(255,255,255,.05);
+
+    backdrop-filter:blur(18px);
+
+    border:1px solid rgba(255,255,255,.08);
+
+    transition:.4s ease;
+
+}
+
+.vision-card::before{
+
+    content:"";
+
+    position:absolute;
+
+    inset:0;
+
+    background:
+
+        radial-gradient(circle at top right,
+
+        rgba(165,255,79,.12),
+
+        transparent 50%);
+
+    opacity:0;
+
+    transition:.4s;
+
+}
+
+.vision-card:hover::before{
+
+    opacity:1;
+
+}
+
+.vision-card:hover{
+
+    transform:translateY(-10px);
+
+    border-color:rgba(0,169,143,.35);
+
+    box-shadow:
+
+        0 0 25px rgba(0,169,143,.18);
+
+}
+
+.vision-card h3{
+
+    color:var(--aston-lime);
+
+    margin-bottom:18px;
+
+    font-family:'Orbitron',sans-serif;
+
+    font-size:1.2rem;
+
+}
+
+.vision-card p{
+
+    line-height:1.9;
+
+    color:#d6d6d6;
+
+}
+
+/*==================================================
+                TIMELINE
+==================================================*/
+
+.timeline h2{
+
+    text-align:center;
+
+    color:var(--aston-green-light);
+
+    margin-bottom:60px;
+
+}
+
+.timeline-container{
+
+    max-width:900px;
+
+    margin:auto;
+
+    padding-left:40px;
+
+    border-left:3px solid rgba(0,169,143,.45);
+
+}
+
+.timeline-item{
+
+    position:relative;
+
+    margin-bottom:60px;
+
+}
+
+.timeline-item::before{
+
+    content:"";
+
+    position:absolute;
+
+    top:8px;
+
+    /* Perfectly center on the timeline */
+    left:-55px;
+
+    width:20px;
+    height:20px;
+
+    border-radius:50%;
+
+    background:var(--aston-lime);
+
+    border:4px solid var(--aston-green);
+
+    box-shadow:
+        0 0 18px rgba(165,255,79,.45);
+
+}
+
+.timeline-item::after{
+
+    content:"";
+
+    position:absolute;
+
+    top:15px;
+
+    left:-45px;
+
+    width:6px;
+    height:6px;
+
+    border-radius:50%;
+
+    background:white;
+
+    box-shadow:
+        0 0 8px white,
+        0 0 15px rgba(165,255,79,.8);
+
+}
+
+.timeline-item h3{
+
+    color:var(--aston-silver);
+
+    margin-bottom:12px;
+
+    font-family:'Orbitron',sans-serif;
+
+    font-size:1.4rem;
+
+}
+
+.timeline-item p{
+
+    color:#d6d6d6;
+
+    line-height:1.9;
+
+}
+
+/*==================================================
+                RESPONSIVE
+==================================================*/
+
+@media(max-width:950px){
+
+    .car-section{
+
+        grid-template-columns:1fr;
+
+    }
+
+    .timeline-container{
+
+        padding-left:25px;
+
+    }
+
+    .timeline-item::before{
+
+        left:-36px;
+
+    }
+
+}
+
+/*==================================================
+                    GALLERY
+==================================================*/
+
+.gallery h2{
+
+    text-align:center;
+
+    color:var(--aston-green-light);
+
+    margin-bottom:50px;
+
+}
+
+.gallery-grid{
+
+    display:grid;
+
+    grid-template-columns:repeat(2,1fr);
+
+    gap:25px;
+
+}
+
+.gallery-item{
+
+    overflow:hidden;
+
+    border-radius:22px;
+
+    border:1px solid rgba(0,169,143,.18);
+
+    background:#111;
+
+    transition:.4s ease;
+
+}
+
+.gallery-item:hover{
+
+    transform:translateY(-8px);
+
+    box-shadow:
+        0 0 28px rgba(0,169,143,.28);
+
+}
+
+.gallery-item img{
+
+    display:block;
+
+    width:100%;
+
+    height:360px;
+
+    object-fit:cover;
+
+    transition:.55s ease;
+
+}
+
+.gallery-item:hover img{
+
+    transform:scale(1.08);
+
+}
+
+
+/*==================================================
+                    DID YOU KNOW
+==================================================*/
+
+.facts h2{
+
+    text-align:center;
+
+    color:var(--aston-green-light);
+
+    margin-bottom:50px;
+
+}
+
+.fact-grid{
+
+    display:grid;
+
+    grid-template-columns:repeat(3,1fr);
+
+    gap:30px;
+
+}
+
+.fact-card{
+
+    position:relative;
+
+    overflow:hidden;
+
+    padding:35px;
+
+    border-radius:24px;
+
+    background:
+
+        linear-gradient(
+            145deg,
+            rgba(20,35,30,.95),
+            rgba(15,20,18,.98)
+        );
+
+    border:1px solid rgba(0,169,143,.18);
+
+    transition:.4s ease;
+
+}
+
+.fact-card::before{
+
+    content:"";
+
+    position:absolute;
+
+    top:0;
+    left:0;
+
+    width:100%;
+    height:4px;
+
+    background:linear-gradient(
+        90deg,
+        var(--aston-green),
+        var(--aston-lime)
+    );
+
+}
+
+.fact-card:hover{
+
+    transform:translateY(-10px);
+
+    border-color:rgba(165,255,79,.4);
+
+    box-shadow:
+        0 0 28px rgba(0,169,143,.25);
+
+}
+
+.fact-card h3{
+
+    color:var(--aston-lime);
+
+    margin-bottom:18px;
+
+    font-family:'Orbitron',sans-serif;
+
+    font-size:1.3rem;
+
+}
+
+.fact-card p{
+
+    color:#d7d7d7;
+
+    line-height:1.9;
+
+}
+
+
+/*==================================================
+                RELATED TEAMS
+==================================================*/
+
+.related h2{
+
+    text-align:center;
+
+    color:var(--aston-green-light);
+
+    margin-bottom:45px;
+
+}
+
+.related-grid{
+
+    display:grid;
+
+    grid-template-columns:repeat(3,1fr);
+
+    gap:30px;
+
+}
+
+/*----------------------------------
+Base Card
+-----------------------------------*/
+
+.related-card{
+
+    position:relative;
+
+    overflow:hidden;
+
+    padding:35px;
+
+    border-radius:24px;
+
+    text-decoration:none;
+
+    color:white;
+
+    transition:.4s ease;
+
+    border:2px solid transparent;
+
+    background:#181818;
+
+}
+
+.related-card h3{
+
+    font-size:1.7rem;
+
+    margin-bottom:12px;
+
+    transition:.35s;
+
+}
+
+.related-card p{
+
+    color:#d8d8d8;
+
+    transition:.35s;
+
+}
+
+/*----------------------------------
+Ferrari
+-----------------------------------*/
+
+.ferrari-card{
+
+    background:
+
+        linear-gradient(rgba(20,20,20,.88),
+        rgba(20,20,20,.88)),
+
+        url("../../images/ferrari/herobg.jpg");
+
+    background-size:cover;
+
+    background-position:center;
+
+    border-color:#DC0000;
+
+}
+
+.ferrari-card h3{
+
+    color:#DC0000;
+
+}
+
+.ferrari-card:hover{
+
+    transform:translateY(-10px);
+
+    box-shadow:0 0 25px rgba(220,0,0,.45);
+
+}
+
+.ferrari-card:hover h3{
+
+    color:#FFD43B;
+
+}
+
+/*----------------------------------
+Mercedes
+-----------------------------------*/
+
+.mercedes-card{
+
+    background:
+
+        linear-gradient(rgba(18,18,18,.88),
+        rgba(18,18,18,.88)),
+
+        url("../../images/mercedes/hero.jpg");
+
+    background-size:cover;
+
+    background-position:center;
+
+    border-color:#00D2BE;
+
+}
+
+.mercedes-card h3{
+
+    color:#00D2BE;
+
+}
+
+.mercedes-card:hover{
+
+    transform:translateY(-10px);
+
+    box-shadow:0 0 25px rgba(0,210,190,.45);
+
+}
+
+.mercedes-card:hover h3{
+
+    color:white;
+
+}
+
+/*----------------------------------
+McLaren
+-----------------------------------*/
+
+.mclaren-card{
+
+    background:
+
+        linear-gradient(rgba(18,18,18,.88),
+        rgba(18,18,18,.88)),
+
+        url("../../images/mclaren/hero.jpg");
+
+    background-size:cover;
+
+    background-position:center;
+
+    border-color:#FF8000;
+
+}
+
+.mclaren-card h3{
+
+    color:#FF8000;
+
+}
+
+.mclaren-card:hover{
+
+    transform:translateY(-10px);
+
+    box-shadow:0 0 25px rgba(255,128,0,.45);
+
+}
+
+.mclaren-card:hover h3{
+
+    color:#00D2FF;
+
+}
+
+/*----------------------------------
+Hover Shine
+-----------------------------------*/
+
+.related-card::before{
+
+    content:"";
+
+    position:absolute;
+
+    top:0;
+
+    left:-100%;
+
+    width:100%;
+
+    height:100%;
+
+    background:
+
+        linear-gradient(
+
+            120deg,
+
+            transparent,
+
+            rgba(255,255,255,.15),
+
+            transparent
+
+        );
+
+    transition:.8s;
+
+}
+
+.related-card:hover::before{
+
+    left:100%;
+
+}
+
+.related-card:hover p{
+
+    color:white;
+
+}
+
+
+/*==================================================
+                BACK BUTTON
+==================================================*/
+
+.back-section{
+
+    text-align:center;
+
+    padding-top:20px;
+
+    padding-bottom:100px;
+
+}
+
+.back-btn{
+
+    display:inline-block;
+
+    padding:16px 40px;
+
+    border-radius:50px;
+
+    text-decoration:none;
+
+    background:linear-gradient(
+        135deg,
+        var(--aston-green),
+        var(--aston-lime)
+    );
+
+    color:#07110F;
+
+    font-weight:700;
+
+    transition:.4s ease;
+
+    box-shadow:
+        0 0 20px rgba(0,169,143,.25);
+
+}
+
+.back-btn:hover{
+
+    transform:translateY(-5px);
+
+    box-shadow:
+        0 0 35px rgba(165,255,79,.35);
+
+}
+
+
+/*==================================================
+                SCROLL REVEAL
+==================================================*/
+
+.hidden{
+
+    opacity:0;
+
+    transform:translateY(60px);
+
+    transition:
+        opacity .9s ease,
+        transform .9s ease;
+
+}
+
+.show{
+
+    opacity:1;
+
+    transform:translateY(0);
+
+}
+
+
+/*==================================================
+                RESPONSIVE
+==================================================*/
+
+@media(max-width:950px){
+
+    .gallery-grid{
+
+        grid-template-columns:1fr;
+
+    }
+
+    .fact-grid{
+
+        grid-template-columns:1fr;
+
+    }
+
+    .related-grid{
+
+        grid-template-columns:1fr;
+
+    }
+
+}
+
+@media(max-width:700px){
+
+    .back-btn{
+
+        width:100%;
+
+        max-width:320px;
+
+        text-align:center;
+
+    }
+
+}
