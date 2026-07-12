@@ -1,0 +1,1703 @@
+/*==================================================
+                ALPINE THEME
+==================================================*/
+
+:root {
+
+     --alpine-blue: #005BFF;
+     --alpine-blue-light: #4FA4FF;
+     --alpine-pink: #FF4DA6;
+     --alpine-white: #F4F7FF;
+
+     --bg: #080A12;
+     --card: #131722;
+     --card2: #1B2230;
+
+     --text: #F4F4F4;
+     --muted: #C9D0DD;
+
+}
+
+/*==================================================
+                GLOBAL
+==================================================*/
+
+* {
+
+     margin: 0;
+     padding: 0;
+     box-sizing: border-box;
+
+}
+
+html {
+
+     scroll-behavior: smooth;
+
+}
+
+body {
+
+     font-family: 'Poppins', sans-serif;
+
+     background:
+          radial-gradient(circle at top,
+               rgba(0, 91, 255, .30),
+               #080A12 40%);
+
+     color: var(--text);
+
+     overflow-x: hidden;
+
+}
+
+section {
+
+     position: relative;
+
+     padding: 100px 8%;
+
+}
+
+h2 {
+
+     font-family: 'Orbitron', sans-serif;
+
+}
+
+/*==================================================
+        PREMIUM SECTION DIVIDER
+==================================================*/
+
+.hero::after {
+
+     display: none;
+
+}
+
+section:not(.hero)::before {
+
+     content: "";
+
+     position: absolute;
+
+     top: 0;
+     left: 50%;
+
+     transform: translateX(-50%);
+
+     width: 72%;
+     height: 2px;
+
+     background:
+
+          linear-gradient(90deg,
+
+               transparent,
+
+               rgba(0, 91, 255, .2),
+
+               rgba(255, 77, 166, .6),
+
+               rgba(0, 91, 255, .2),
+
+               transparent);
+
+     box-shadow:
+
+          0 0 15px rgba(0, 91, 255, .18),
+
+          0 0 30px rgba(255, 77, 166, .08);
+
+}
+
+/*==================================================
+                NAVBAR
+==================================================*/
+
+nav {
+
+     position: fixed;
+
+     top: 0;
+     left: 0;
+
+     width: 100%;
+
+     z-index: 999;
+
+     display: flex;
+
+     justify-content: space-between;
+
+     align-items: center;
+
+     padding: 22px 8%;
+
+     background: rgba(8, 10, 18, .88);
+
+     backdrop-filter: blur(18px);
+
+     border-bottom: 1px solid rgba(79, 164, 255, .15);
+
+}
+
+.logo {
+
+     color: var(--alpine-blue-light);
+
+     font-size: 2rem;
+
+     font-weight: bold;
+
+     font-family: 'Orbitron', sans-serif;
+
+     letter-spacing: 2px;
+
+}
+
+nav ul {
+
+     display: flex;
+
+     gap: 35px;
+
+     list-style: none;
+
+}
+
+nav a {
+
+     color: white;
+
+     text-decoration: none;
+
+     position: relative;
+
+     transition: .35s;
+
+}
+
+nav a::after {
+
+     content: "";
+
+     position: absolute;
+
+     left: 0;
+     bottom: -6px;
+
+     width: 0;
+     height: 2px;
+
+     background: var(--alpine-pink);
+
+     transition: .35s;
+
+}
+
+nav a:hover {
+
+     color: var(--alpine-blue-light);
+
+}
+
+nav a:hover::after {
+
+     width: 100%;
+
+}
+
+/*==================================================
+                HERO
+==================================================*/
+
+.hero {
+
+     height: 100vh;
+
+     display: flex;
+
+     justify-content: center;
+
+     align-items: center;
+
+     text-align: center;
+
+     position: relative;
+
+     overflow: hidden;
+
+     background:
+
+          linear-gradient(rgba(0, 0, 0, .55),
+
+               rgba(0, 0, 0, .82)),
+
+          url("../../images/alpine/hero.jpg");
+
+     background-size: cover;
+
+     background-position: center;
+
+     background-attachment: fixed;
+
+}
+
+/* Blue glow */
+
+.hero::before {
+
+     content: "";
+
+     position: absolute;
+
+     inset: 0;
+
+     background:
+
+          radial-gradient(circle,
+
+               rgba(0, 91, 255, .25),
+
+               transparent 60%);
+
+}
+
+/* Pink glow */
+
+.hero::after {
+
+     content: "";
+
+     position: absolute;
+
+     inset: 0;
+
+     background:
+
+          radial-gradient(circle at bottom right,
+
+               rgba(255, 77, 166, .18),
+
+               transparent 55%);
+
+}
+
+.hero-content {
+
+     position: relative;
+
+     z-index: 5;
+
+     max-width: 900px;
+
+}
+
+.hero h1 {
+
+     font-size: 5.3rem;
+
+     color: var(--alpine-blue-light);
+
+     font-family: 'Orbitron', sans-serif;
+
+     text-shadow:
+
+          0 0 15px rgba(0, 91, 255, .5),
+
+          0 0 40px rgba(0, 91, 255, .25);
+
+}
+
+.team-small {
+
+     color: var(--alpine-pink);
+
+     margin: 20px 0;
+
+     text-transform: uppercase;
+
+     letter-spacing: 5px;
+
+     font-weight: 600;
+
+}
+
+.hero h3 {
+
+     font-size: 2rem;
+
+     font-weight: 300;
+
+     margin-top: 20px;
+
+}
+
+.hero-tags {
+
+     display: flex;
+
+     justify-content: center;
+
+     flex-wrap: wrap;
+
+     gap: 18px;
+
+     margin-top: 40px;
+
+}
+
+.hero-tags span {
+
+     padding: 12px 24px;
+
+     border-radius: 50px;
+
+     background: rgba(255, 255, 255, .05);
+
+     border: 1px solid rgba(79, 164, 255, .2);
+
+     backdrop-filter: blur(15px);
+
+     transition: .35s;
+
+}
+
+.hero-tags span:hover {
+
+     transform: translateY(-5px);
+
+     border-color: var(--alpine-pink);
+
+     box-shadow:
+
+          0 0 18px rgba(255, 77, 166, .25);
+
+}
+
+/*==================================================
+                OVERVIEW
+==================================================*/
+
+.overview {
+
+     display: grid;
+
+     grid-template-columns: 350px 1fr;
+
+     gap: 45px;
+
+     align-items: center;
+
+}
+
+.logo-card {
+
+     display: flex;
+
+     justify-content: center;
+
+     align-items: center;
+
+     background: linear-gradient(145deg, var(--card), #10151F);
+
+     border-radius: 28px;
+
+     padding: 25px;
+
+     border: 1px solid rgba(79, 164, 255, .15);
+
+     box-shadow:
+
+          0 0 25px rgba(0, 91, 255, .15);
+
+}
+
+.logo-card img {
+
+     width: 300px;
+
+}
+
+.info-card {
+
+     background: linear-gradient(145deg, var(--card), var(--card2));
+
+     padding: 40px;
+
+     border-radius: 25px;
+
+     border: 1px solid rgba(79, 164, 255, .12);
+
+}
+
+.info-card h2 {
+
+     color: var(--alpine-blue-light);
+
+     margin-bottom: 35px;
+
+}
+
+.info-grid {
+
+     display: grid;
+
+     grid-template-columns: repeat(2, 1fr);
+
+     gap: 25px;
+
+}
+
+.info-grid div {
+
+     background: #181E2A;
+
+     padding: 18px;
+
+     border-radius: 15px;
+
+     transition: .35s;
+
+}
+
+.info-grid div:hover {
+
+     transform: translateY(-5px);
+
+     border: 1px solid rgba(255, 77, 166, .35);
+
+}
+
+.info-grid h4 {
+
+     color: var(--alpine-pink);
+
+     margin-bottom: 8px;
+
+}
+
+.info-grid p {
+
+     color: var(--muted);
+
+}
+
+/*==================================================
+                ABOUT
+==================================================*/
+
+.about-team {
+
+     max-width: 1000px;
+
+     margin: auto;
+
+     text-align: center;
+
+}
+
+.about-team h2 {
+
+     color: var(--alpine-blue-light);
+
+     margin-bottom: 35px;
+
+     font-size: 2.6rem;
+
+}
+
+.about-team p {
+
+     color: #D7DCE7;
+
+     line-height: 2;
+
+     font-size: 1.08rem;
+
+}
+
+/*==================================================
+                DRIVERS
+==================================================*/
+
+.drivers h2 {
+
+     text-align: center;
+
+     color: var(--alpine-blue-light);
+
+     margin-bottom: 50px;
+
+     font-size: 2.5rem;
+
+}
+
+.driver-grid {
+
+     display: grid;
+
+     grid-template-columns: repeat(2, 1fr);
+
+     gap: 40px;
+
+}
+
+.driver-card {
+
+     background: linear-gradient(145deg, var(--card), var(--card2));
+
+     border-radius: 24px;
+
+     overflow: hidden;
+
+     text-decoration: none;
+
+     color: white;
+
+     transition: .45s;
+
+     border: 1px solid rgba(79, 164, 255, .12);
+
+}
+
+.driver-card:hover {
+
+     transform: translateY(-10px);
+
+     box-shadow:
+
+          0 0 30px rgba(0, 91, 255, .28),
+
+          0 0 15px rgba(255, 77, 166, .12);
+
+}
+
+.driver-image {
+
+     height: 380px;
+
+     overflow: hidden;
+
+}
+
+.driver-image img {
+
+     width: 100%;
+
+     height: 100%;
+
+     object-fit: cover;
+
+     transition: .5s;
+
+}
+
+.driver-card:hover img {
+
+     transform: scale(1.08);
+
+}
+
+.driver-content {
+
+     padding: 28px;
+
+}
+
+.driver-content h3 {
+
+     color: var(--alpine-blue-light);
+
+     font-size: 1.8rem;
+
+}
+
+.driver-content p {
+
+     color: var(--muted);
+
+     margin: 12px 0;
+
+}
+
+.driver-content span {
+
+     color: var(--alpine-pink);
+
+     font-weight: 600;
+
+}
+
+.driver-card:hover span {
+
+     letter-spacing: 1px;
+
+}
+
+/*==================================================
+                SCROLLBAR
+==================================================*/
+
+::-webkit-scrollbar {
+
+     width: 10px;
+
+}
+
+::-webkit-scrollbar-track {
+
+     background: #111;
+
+}
+
+::-webkit-scrollbar-thumb {
+
+     background: linear-gradient(var(--alpine-blue),
+
+               var(--alpine-pink));
+
+     border-radius: 10px;
+
+}
+
+::-webkit-scrollbar-thumb:hover {
+
+     background: var(--alpine-pink);
+
+}
+
+/*==================================================
+                RESPONSIVE
+==================================================*/
+
+@media(max-width:950px) {
+
+     .overview {
+
+          grid-template-columns: 1fr;
+
+     }
+
+     .driver-grid {
+
+          grid-template-columns: 1fr;
+
+     }
+
+     .info-grid {
+
+          grid-template-columns: 1fr;
+
+     }
+
+     .hero h1 {
+
+          font-size: 3.6rem;
+
+     }
+
+     .hero h3 {
+
+          font-size: 1.4rem;
+
+     }
+
+}
+
+/*==================================================
+                THE A526
+==================================================*/
+
+.car-section {
+
+     display: grid;
+
+     grid-template-columns: 1fr 1fr;
+
+     gap: 70px;
+
+     align-items: center;
+
+}
+
+.car-text h2 {
+
+     color: var(--alpine-blue-light);
+
+     font-size: 2.6rem;
+
+     margin-bottom: 25px;
+
+}
+
+.car-text p {
+
+     color: #d8dce7;
+
+     line-height: 2;
+
+}
+
+.car-image {
+
+     display: flex;
+
+     justify-content: center;
+
+}
+
+.car-image img {
+
+     width: 100%;
+
+     max-width: 700px;
+
+     transition: .5s ease;
+
+     filter:
+          drop-shadow(0 0 25px rgba(0, 91, 255, .30));
+
+}
+
+.car-image img:hover {
+
+     transform: scale(1.04);
+
+     filter:
+
+          drop-shadow(0 0 35px rgba(0, 91, 255, .45)) drop-shadow(0 0 15px rgba(255, 77, 166, .25));
+
+}
+
+/*==================================================
+                TEAM RECORDS
+==================================================*/
+
+.records h2 {
+
+     text-align: center;
+
+     color: var(--alpine-blue-light);
+
+     margin-bottom: 55px;
+
+}
+
+.record-grid {
+
+     display: grid;
+
+     grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+
+     gap: 30px;
+
+}
+
+.record-card {
+
+     position: relative;
+
+     overflow: hidden;
+
+     padding: 35px;
+
+     text-align: center;
+
+     border-radius: 24px;
+
+     background:
+
+          linear-gradient(145deg,
+               rgba(19, 23, 34, .96),
+               rgba(30, 37, 52, .95));
+
+     border: 1px solid rgba(79, 164, 255, .15);
+
+     transition: .4s ease;
+
+}
+
+.record-card::before {
+
+     content: "";
+
+     position: absolute;
+
+     top: 0;
+
+     left: 0;
+
+     width: 100%;
+
+     height: 4px;
+
+     background:
+
+          linear-gradient(90deg,
+
+               var(--alpine-blue),
+
+               var(--alpine-pink));
+
+}
+
+.record-card::after {
+
+     content: "";
+
+     position: absolute;
+
+     top: 0;
+
+     left: -120%;
+
+     width: 60%;
+
+     height: 100%;
+
+     background:
+
+          linear-gradient(120deg,
+
+               transparent,
+
+               rgba(255, 255, 255, .16),
+
+               transparent);
+
+     transition: .8s;
+
+}
+
+.record-card:hover::after {
+
+     left: 150%;
+
+}
+
+.record-card:hover {
+
+     transform: translateY(-10px);
+
+     border-color: var(--alpine-pink);
+
+     box-shadow:
+
+          0 0 30px rgba(0, 91, 255, .30);
+
+}
+
+.record-card span {
+
+     display: block;
+
+     font-size: 2.8rem;
+
+     color: var(--alpine-blue-light);
+
+     font-family: 'Orbitron', sans-serif;
+
+     margin-bottom: 15px;
+
+     text-shadow:
+
+          0 0 12px rgba(0, 91, 255, .45);
+
+}
+
+.record-card p {
+
+     color: #d5d9e5;
+
+     line-height: 1.7;
+
+}
+
+/*==================================================
+                ALPINE DNA
+==================================================*/
+
+.dna h2 {
+
+     text-align: center;
+
+     color: var(--alpine-blue-light);
+
+     margin-bottom: 20px;
+
+}
+
+.dna-intro {
+
+     max-width: 900px;
+
+     margin: 0 auto 60px;
+
+     text-align: center;
+
+     color: #d6dbe7;
+
+     line-height: 2;
+
+}
+
+.dna-grid {
+
+     display: grid;
+
+     grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+
+     gap: 30px;
+
+}
+
+.dna-card {
+
+     position: relative;
+
+     overflow: hidden;
+
+     padding: 35px;
+
+     border-radius: 24px;
+
+     background:
+
+          linear-gradient(145deg,
+               rgba(20, 24, 38, .96),
+               rgba(29, 36, 53, .96));
+
+     border: 1px solid rgba(79, 164, 255, .18);
+
+     transition: .4s ease;
+
+}
+
+.dna-card::before {
+
+     content: "";
+
+     position: absolute;
+
+     inset: 0;
+
+     background:
+
+          radial-gradient(circle at top right,
+
+               rgba(255, 77, 166, .12),
+
+               transparent 60%);
+
+     opacity: 0;
+
+     transition: .4s;
+
+}
+
+.dna-card:hover::before {
+
+     opacity: 1;
+
+}
+
+.dna-card:hover {
+
+     transform: translateY(-10px);
+
+     border-color: var(--alpine-pink);
+
+     box-shadow:
+
+          0 0 28px rgba(0, 91, 255, .28);
+
+}
+
+.dna-card h3 {
+
+     color: var(--alpine-pink);
+
+     margin-bottom: 18px;
+
+     font-family: 'Orbitron', sans-serif;
+
+     font-size: 1.2rem;
+
+}
+
+.dna-card p {
+
+     color: #d5d9e5;
+
+     line-height: 1.9;
+
+}
+
+/*==================================================
+                TIMELINE
+==================================================*/
+
+.timeline h2 {
+
+     text-align: center;
+
+     color: var(--alpine-blue-light);
+
+     margin-bottom: 50px;
+
+}
+
+.timeline-container {
+
+     max-width: 900px;
+
+     margin: auto;
+
+     padding-left: 40px;
+
+     border-left: 3px solid var(--alpine-blue);
+
+}
+
+.timeline-item {
+
+     position: relative;
+
+     margin-bottom: 60px;
+
+}
+
+/* Outer blue ring */
+
+.timeline-item::before {
+
+     content: "";
+
+     position: absolute;
+
+     width: 24px;
+
+     height: 24px;
+
+     left: -54px;
+
+     top: 8px;
+
+     border-radius: 50%;
+
+     background: var(--alpine-blue);
+
+     box-shadow:
+          0 0 15px rgba(0, 91, 255, .45);
+
+}
+
+/* Inner pink dot */
+
+.timeline-item::after {
+
+     content: "";
+
+     position: absolute;
+
+     width: 15px;
+
+     height: 15px;
+
+     left: -49px;
+
+     top: 13px;
+
+     border-radius: 50%;
+
+     background: var(--alpine-pink);
+
+     box-shadow:
+          0 0 15px rgba(255, 77, 166, .6);
+
+}
+
+.timeline-item h3 {
+
+     color: var(--alpine-pink);
+
+     margin-bottom: 12px;
+
+     font-size: 1.35rem;
+
+     font-family: 'Orbitron', sans-serif;
+
+}
+
+.timeline-item p {
+
+     color: #d8dce7;
+
+     line-height: 1.9;
+
+}
+
+/*==================================================
+                RESPONSIVE
+==================================================*/
+
+@media(max-width:950px) {
+
+     .car-section {
+
+          grid-template-columns: 1fr;
+
+     }
+
+     .timeline-container {
+
+          padding-left: 25px;
+
+     }
+
+     .timeline-item::before {
+
+          left: -36px;
+
+     }
+
+}
+
+
+/*==================================================
+                    GALLERY
+==================================================*/
+
+.gallery h2 {
+
+     text-align: center;
+
+     color: var(--alpine-blue-light);
+
+     margin-bottom: 50px;
+
+}
+
+.gallery-grid {
+
+     display: grid;
+
+     grid-template-columns: repeat(2, 1fr);
+
+     gap: 25px;
+
+}
+
+.gallery-item {
+
+     overflow: hidden;
+
+     border-radius: 22px;
+
+     border: 1px solid rgba(79, 164, 255, .18);
+
+     background: #121826;
+
+     transition: .4s ease;
+
+}
+
+.gallery-item:hover {
+
+     transform: translateY(-8px);
+
+     box-shadow:
+
+          0 0 28px rgba(0, 91, 255, .30);
+
+}
+
+.gallery-item img {
+
+     display: block;
+
+     width: 100%;
+
+     height: 360px;
+
+     object-fit: cover;
+
+     transition: .55s ease;
+
+}
+
+.gallery-item:hover img {
+
+     transform: scale(1.08);
+
+}
+
+/*==================================================
+                    DID YOU KNOW
+==================================================*/
+
+.facts h2 {
+
+     text-align: center;
+
+     color: var(--alpine-blue-light);
+
+     margin-bottom: 50px;
+
+}
+
+.fact-grid {
+
+     display: grid;
+
+     grid-template-columns: repeat(3, 1fr);
+
+     gap: 30px;
+
+}
+
+.fact-card {
+
+     position: relative;
+
+     overflow: hidden;
+
+     padding: 35px;
+
+     border-radius: 24px;
+
+     background:
+
+          linear-gradient(145deg,
+
+               rgba(18, 24, 36, .96),
+
+               rgba(27, 34, 48, .96));
+
+     border: 1px solid rgba(79, 164, 255, .18);
+
+     transition: .4s ease;
+
+}
+
+.fact-card::before {
+
+     content: "";
+
+     position: absolute;
+
+     top: 0;
+
+     left: 0;
+
+     width: 100%;
+
+     height: 4px;
+
+     background:
+
+          linear-gradient(90deg,
+
+               var(--alpine-blue),
+
+               var(--alpine-pink));
+
+}
+
+.fact-card:hover {
+
+     transform: translateY(-10px);
+
+     border-color: var(--alpine-pink);
+
+     box-shadow:
+
+          0 0 30px rgba(0, 91, 255, .30);
+
+}
+
+.fact-card h3 {
+
+     color: var(--alpine-pink);
+
+     margin-bottom: 20px;
+
+     font-family: 'Orbitron', sans-serif;
+
+     font-size: 1.3rem;
+
+}
+
+.fact-card p {
+
+     color: #d7dce8;
+
+     line-height: 1.9;
+
+}
+
+/*==================================================
+                RELATED TEAMS
+==================================================*/
+
+.related h2 {
+
+     text-align: center;
+
+     color: var(--alpine-blue-light);
+
+     margin-bottom: 45px;
+
+}
+
+.related-grid {
+
+     display: grid;
+
+     grid-template-columns: repeat(3, 1fr);
+
+     gap: 30px;
+
+}
+
+/*----------------------------------
+Base Card
+-----------------------------------*/
+
+.related-card {
+
+     position: relative;
+
+     overflow: hidden;
+
+     padding: 35px;
+
+     border-radius: 24px;
+
+     text-decoration: none;
+
+     color: white;
+
+     transition: .4s ease;
+
+     border: 2px solid transparent;
+
+     background: #181818;
+
+}
+
+.related-card h3 {
+
+     font-size: 1.7rem;
+
+     margin-bottom: 12px;
+
+     transition: .35s;
+
+}
+
+.related-card p {
+
+     color: #d8d8d8;
+
+     transition: .35s;
+
+}
+
+/*----------------------------------
+Aston Martin
+-----------------------------------*/
+
+.aston-card {
+
+     background:
+
+          linear-gradient(rgba(15, 20, 18, .90),
+
+               rgba(15, 20, 18, .90)),
+
+          url("../../images/astonmartin/hero.jpg");
+
+     background-size: cover;
+
+     background-position: center;
+
+     border-color: #006F62;
+
+}
+
+.aston-card h3 {
+
+     color: #00A98F;
+
+}
+
+.aston-card:hover {
+
+     transform: translateY(-10px);
+
+     box-shadow:
+
+          0 0 25px rgba(0, 169, 143, .40);
+
+}
+
+.aston-card:hover h3 {
+
+     color: #A5FF4F;
+
+}
+
+/*----------------------------------
+McLaren
+-----------------------------------*/
+
+.mclaren-card {
+
+     background:
+
+          linear-gradient(rgba(18, 18, 18, .90),
+
+               rgba(18, 18, 18, .90)),
+
+          url("../../images/mclaren/hero.jpg");
+
+     background-size: cover;
+
+     background-position: center;
+
+     border-color: #FF8000;
+
+}
+
+.mclaren-card h3 {
+
+     color: #FF8000;
+
+}
+
+.mclaren-card:hover {
+
+     transform: translateY(-10px);
+
+     box-shadow:
+
+          0 0 25px rgba(255, 128, 0, .45);
+
+}
+
+.mclaren-card:hover h3 {
+
+     color: #00D2FF;
+
+}
+
+/*----------------------------------
+Williams
+-----------------------------------*/
+
+.williams-card {
+
+     background:
+
+          linear-gradient(rgba(10, 20, 45, .88),
+
+               rgba(10, 20, 45, .88)),
+
+          url("../../images/williams/hero.jpg");
+
+     background-size: cover;
+
+     background-position: center;
+
+     border-color: #005AFF;
+
+}
+
+.williams-card h3 {
+
+     color: #4FA4FF;
+
+}
+
+.williams-card:hover {
+
+     transform: translateY(-10px);
+
+     box-shadow:
+
+          0 0 25px rgba(0, 90, 255, .40);
+
+}
+
+.williams-card:hover h3 {
+
+     color: white;
+
+}
+
+/*----------------------------------
+Hover Shine
+-----------------------------------*/
+
+.related-card::before {
+
+     content: "";
+
+     position: absolute;
+
+     top: 0;
+
+     left: -100%;
+
+     width: 100%;
+
+     height: 100%;
+
+     background:
+
+          linear-gradient(120deg,
+
+               transparent,
+
+               rgba(255, 255, 255, .15),
+
+               transparent);
+
+     transition: .8s;
+
+}
+
+.related-card:hover::before {
+
+     left: 100%;
+
+}
+
+.related-card:hover p {
+
+     color: white;
+
+}
+
+/*==================================================
+                    BACK BUTTON
+==================================================*/
+
+.back-section {
+
+     text-align: center;
+
+     padding-top: 20px;
+
+     padding-bottom: 100px;
+
+}
+
+.back-btn {
+
+     display: inline-block;
+
+     padding: 16px 40px;
+
+     border-radius: 50px;
+
+     text-decoration: none;
+
+     font-weight: 700;
+
+     color: white;
+
+     background:
+
+          linear-gradient(135deg,
+
+               var(--alpine-blue),
+
+               var(--alpine-pink));
+
+     box-shadow:
+
+          0 0 22px rgba(0, 91, 255, .25);
+
+     transition: .35s ease;
+
+}
+
+.back-btn:hover {
+
+     transform: translateY(-5px);
+
+     box-shadow:
+
+          0 0 35px rgba(255, 77, 166, .35);
+
+}
+
+/*==================================================
+                SCROLL REVEAL
+==================================================*/
+
+.hidden {
+
+     opacity: 0;
+
+     transform: translateY(60px);
+
+     transition:
+
+          opacity .9s ease,
+
+          transform .9s ease;
+
+}
+
+.show {
+
+     opacity: 1;
+
+     transform: translateY(0);
+
+}
+
+/*==================================================
+                    RESPONSIVE
+==================================================*/
+
+@media(max-width:950px) {
+
+     .gallery-grid {
+
+          grid-template-columns: 1fr;
+
+     }
+
+     .fact-grid {
+
+          grid-template-columns: 1fr;
+
+     }
+
+     .related-grid {
+
+          grid-template-columns: 1fr;
+
+     }
+
+}
+
+@media(max-width:700px) {
+
+     .back-btn {
+
+          width: 100%;
+
+          max-width: 320px;
+
+          text-align: center;
+
+     }
+
+}
