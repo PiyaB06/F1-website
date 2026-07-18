@@ -58,6 +58,7 @@ nav{
 
     background-size:cover;
     background-position:center;
+    margin-bottom:50px;
 }
 
 .hero-content{
@@ -68,7 +69,7 @@ nav{
     font-family:'Orbitron',sans-serif;
     color:#E10600;
     font-size:4rem;
-    margin-bottom:20px;
+    margin-bottom:50px;
 }
 
 .hero p{
@@ -81,11 +82,11 @@ nav{
 /* =====================
    TEAMS GRID
 ===================== */
-.teams-h2{
+.teams-heading{
     text-align:center;
-    font-family:'Orbitron',sans-serif;
-    font-size:2.5rem;
-    margin-bottom:50px;
+    font-family:'Orbitron',Comic Sans MS,sans-serif;
+    font-size:2.0rem;
+    margin-bottom:5px;
 }
 .teams-grid{
     padding:80px 5%;
@@ -272,11 +273,11 @@ nav{
 /* Sauber */
 
 .sauber{
-    border-color:#52E252;
+    border-color:#b10000;
 }
 
 .sauber .team-name{
-    color:#52E252;
+    color:#c50505;
 }
 
 /* Cadillac */
@@ -336,7 +337,7 @@ nav{
 
 /* Sauber */
 .sauber:hover{
-    box-shadow:0 0 25px rgba(82,226,82,.4);
+    box-shadow:0 0 25px rgba(255, 254, 254, 0.4);
 }
 
 /* Cadillac */
@@ -385,7 +386,7 @@ nav{
 }
 
 .sauber::before{
-    background-image:url('../../images/teams/sauber.png');
+    background-image:url('../../images/teams/audi.png');
 }
 
 .cadillac::before{
